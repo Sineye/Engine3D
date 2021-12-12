@@ -6,6 +6,7 @@
 class TransformableObject : virtual public GameObject
 {
 public:
+    //TODO adapt for 3D
     virtual void translate( float tx, float ty ) = 0;
     virtual void scale( float sx, float sy ) = 0;
     virtual void rotate( float angle_deg ) = 0;

@@ -9,6 +9,7 @@
 class ResourceManager
 {
 private:
+    //TODO will have to replace with GL texture IDs
     static std::unordered_map< std::string, SDL_Texture * > map_path_to_bitmap;
 
 public:

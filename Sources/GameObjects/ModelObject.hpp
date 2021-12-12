@@ -7,6 +7,7 @@
 class ModelObject : virtual public TransformableObject
 {
 public:
+    //TODO refactor for 3D
     float transl_x, transl_y;
     float scale_x, scale_y;
     float rotation_deg;
