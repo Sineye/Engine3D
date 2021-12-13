@@ -44,6 +44,8 @@ add_library(${PROJECT_NAME} STATIC
     ${CMAKE_CURRENT_SOURCE_DIR}/Sources/GameObjects/GameObject.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/Sources/ResourceManager/ResourceManager.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/Sources/PrimitiveRendering/PrimitiveRenderer.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/Sources/PrimitiveRendering/Cube.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/Sources/GameObjects/CubeObject.cpp
 )
 
 target_include_directories(${PROJECT_NAME} PUBLIC 
