@@ -18,6 +18,12 @@ enum WindowMode
     FULLSCREEN_MODE = SDL_WINDOW_FULLSCREEN
 };
 
+enum ProjectionMode
+{
+	PROJECTION_ORTHOGRAPHIC,
+	PROJECTION_PERSPECTIVE
+};
+
 class Engine
 {
 public:
@@ -39,6 +45,8 @@ public:
 	// If you want the engine to let go of ther pointer, set is_alive to false in the object
 	// Depending on renounce_ownership value, takes the ownership or only weakly references the pointer
 	void add_game_object( GameObject *go, bool renounce_ownership = true );
+
+	void set_projection_mode( ProjectionMode mode );
 	
 public:
 	SDL_Window * sdl_window;

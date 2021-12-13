@@ -42,15 +42,20 @@ Engine::Engine(const char * title, int x, int y, int w, int h, WindowMode window
 	glBlendFunc( GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA );
 	glEnable( GL_DEPTH_TEST );
 
-	glMatrixMode( GL_PROJECTION );
-	glLoadMatrixf( glm::value_ptr( glm::identity<glm::mat4>() ) );
+	set_projection_mode( PROJECTION_PERSPECTIVE );
 	glMatrixMode( GL_MODELVIEW );
-	glLoadMatrixf( glm::value_ptr( glm::identity<glm::mat4>() ) );
+	glLoadMatrixf( glm::value_ptr( glm::mat4(1.f) ) );
 
 	previous_time = 0;
 	target_time = 1000 / frame_rate;
 
 	is_running = true;
+
+	GLenum err =  glGetError();
+	if( err != GL_NO_ERROR )
+	{
+		LOG( gluErrorString(err) );
+	}
 }
 
 Engine::~Engine()
@@ -207,5 +212,24 @@ void Engine::remove_dead_game_objects()
 			// if we don't erase we simply increment the iterator
 			++it;
 		}
+	}
+}
+
+void Engine::set_projection_mode( ProjectionMode mode ) 
+{
+	int w, h;
+	SDL_GetWindowSize( sdl_window, &w, &h );
+
+	glMatrixMode( GL_PROJECTION );
+	glm::mat4 m;
+	if( mode == PROJECTION_ORTHOGRAPHIC )
+	{
+		m = glm::ortho( 0.f, (float)w, 0.f, (float)h, 0.1f, 100.f );
+		glLoadMatrixf( glm::value_ptr( m ) );
+	}
+	else
+	{
+		m = glm::perspective( glm::radians( 120.f ), (float)w / (float)h, 0.1f, 100.f );
+		glLoadMatrixf( glm::value_ptr( m ) );
 	}
 }
