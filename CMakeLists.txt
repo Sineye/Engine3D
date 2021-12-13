@@ -28,6 +28,16 @@ FetchContent_Declare(
 FetchContent_MakeAvailable( SDL2 SDL2_image GLM )
 
 
+if(UNIX)
+set(OpenGL_GL_PREFERENCE GLVND)
+endif()
+
+# findOpenGL should come with CMake installation
+find_package(OpenGL REQUIRED)
+
+find_package(GLEW REQUIRED)
+
+
 add_library(${PROJECT_NAME} STATIC
     ${CMAKE_CURRENT_SOURCE_DIR}/Sources/Engine/Engine.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/Sources/GameObjects/SimpleEventListeningObject.cpp
@@ -40,10 +50,12 @@ target_include_directories(${PROJECT_NAME} PUBLIC
     ${sdl2_SOURCE_DIR}
     ${sdl2_image_SOURCE_DIR}
     # ${sdl2_ttf_SOURCE_DIR}
+    ${OPENGL_INCLUDE_DIR}
+    ${GLEW_INCLUDE_DIRS}
     ${glm_SOURCE_DIR}
 )
 
-target_link_libraries(${PROJECT_NAME} SDL2 SDL2_image)
+target_link_libraries(${PROJECT_NAME} SDL2 SDL2_image ${OPENGL_LIBRARIES} ${GLEW_LIBRARIES})
 
 
 

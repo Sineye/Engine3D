@@ -15,15 +15,16 @@ SDL_Texture* ResourceManager::load_bitmap(const char* path)
         return it->second;
     }
 
-    SDL_Surface *surf = IMG_Load( path );
+    //FIXME replace with GL texture handle creation, erase any use of SDL_Texture
+    // SDL_Surface *surf = IMG_Load( path );
 
-    if( surf )
-    {
-        SDL_Texture *tex = SDL_CreateTextureFromSurface( Engine::get_instance()->sdl_renderer, surf );
-        SDL_FreeSurface( surf );
-        map_path_to_bitmap[ path ] = tex;
-        return tex;
-    }
+    // if( surf )
+    // {
+    //     SDL_Texture *tex = SDL_CreateTextureFromSurface( Engine::get_instance()->sdl_renderer, surf );
+    //     SDL_FreeSurface( surf );
+    //     map_path_to_bitmap[ path ] = tex;
+    //     return tex;
+    // }
 
     return nullptr;
 }

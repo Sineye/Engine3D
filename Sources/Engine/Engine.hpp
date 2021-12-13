@@ -1,6 +1,9 @@
 #pragma once
 
+// these SDL and GL includes have to be in this very specific order, DON'T CHANGE IT!
 #include <SDL.h>
+#include <GL/glew.h>
+#include <SDL_opengl.h>
 
 #include "Utility/Log.hpp"
 #include "GameObjects/GameObject.hpp"
@@ -39,7 +42,7 @@ public:
 	
 public:
 	SDL_Window * sdl_window;
-	SDL_Renderer * sdl_renderer;
+	SDL_GLContext sdl_gl_context;
 
 
 private:
@@ -51,6 +54,4 @@ private:
 	
 	std::vector< std::shared_ptr<GameObject> > vec_game_objects;
 	void remove_dead_game_objects();
-
-	void do_collisions();
 };
