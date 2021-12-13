@@ -1,6 +1,9 @@
+#define ENABLE_TESTING
+
 #include <stdlib.h>
 
 #include "Engine/Engine.hpp"
+#include "Testing/FirstCubeTestObject.hpp"
 
 #ifdef _WIN32
 #undef main
@@ -8,7 +11,11 @@
 
 int main()
 {
-    Engine * engine = Engine::get_instance("Tech Demo", 64, 64, 512, 512, WINDOWED_MODE, 60);
+    Engine * engine = Engine::get_instance("Engine3D", 64, 64, 512, 512, WINDOWED_MODE, 60);
+
+#ifdef ENABLE_TESTING
+	engine->add_game_object( new FirstCubeTestObject() );
+#endif
 
     while (engine->is_running)
 	{

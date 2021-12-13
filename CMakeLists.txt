@@ -62,6 +62,7 @@ target_link_libraries(${PROJECT_NAME} SDL2 SDL2_image ${OPENGL_LIBRARIES} ${GLEW
 
 add_executable(${PROJECT_NAME}_TEST 
     ${CMAKE_CURRENT_SOURCE_DIR}/Sources/Main.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/Sources/Testing/FirstCubeTestObject.cpp
 )
 
 target_link_libraries(${PROJECT_NAME}_TEST ${PROJECT_NAME})
