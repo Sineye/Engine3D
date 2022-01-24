@@ -10,22 +10,12 @@ FetchContent_Declare(
     GIT_TAG main
 )
 FetchContent_Declare(
-    SDL2_image
-    GIT_REPOSITORY "https://github.com/libsdl-org/SDL_image"
-    GIT_TAG main
-)
-# FetchContent_Declare(
-#     SDL2_ttf
-#     GIT_REPOSITORY "https://github.com/libsdl-org/SDL_ttf"
-#     GIT_TAG main
-# )
-FetchContent_Declare(
     GLM
     GIT_REPOSITORY "https://github.com/g-truc/glm"
     GIT_TAG master
 )
 
-FetchContent_MakeAvailable( SDL2 SDL2_image GLM )
+FetchContent_MakeAvailable( SDL2 GLM )
 
 
 if(UNIX)
@@ -48,20 +38,21 @@ add_library(${PROJECT_NAME} STATIC
     ${CMAKE_CURRENT_SOURCE_DIR}/Sources/PrimitiveRendering/Cube.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/Sources/GameObjects/CubeObject.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/Sources/GameObjects/LightObject.cpp
-    ${CMAKE_CURRENT_SOURCE_DIR}/Sources/Testing/LightingTest.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/Sources/External/stb_image.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/Sources/Texture/Texture.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/Sources/PrimitiveRendering/TexturedCube.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/Sources/GameObjects/TexturedCubeObject.cpp
 )
 
 target_include_directories(${PROJECT_NAME} PUBLIC 
     ${CMAKE_CURRENT_SOURCE_DIR}/Sources
     ${sdl2_SOURCE_DIR}
-    ${sdl2_image_SOURCE_DIR}
-    # ${sdl2_ttf_SOURCE_DIR}
     ${OPENGL_INCLUDE_DIR}
     ${GLEW_INCLUDE_DIRS}
     ${glm_SOURCE_DIR}
 )
 
-target_link_libraries(${PROJECT_NAME} SDL2 SDL2_image ${OPENGL_LIBRARIES} ${GLEW_LIBRARIES})
+target_link_libraries(${PROJECT_NAME} SDL2 ${OPENGL_LIBRARIES} ${GLEW_LIBRARIES})
 
 
 
@@ -69,6 +60,7 @@ target_link_libraries(${PROJECT_NAME} SDL2 SDL2_image ${OPENGL_LIBRARIES} ${GLEW
 add_executable(${PROJECT_NAME}_TEST 
     ${CMAKE_CURRENT_SOURCE_DIR}/Sources/Main.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/Sources/Testing/FirstCubeTestObject.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/Sources/Testing/LightingTest.cpp
 )
 
 target_link_libraries(${PROJECT_NAME}_TEST ${PROJECT_NAME})
