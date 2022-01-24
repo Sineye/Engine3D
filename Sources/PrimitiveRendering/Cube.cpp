@@ -1,53 +1,70 @@
 #include "Cube.hpp"
 
+#include <cstdlib>
 #include <cstring>
 
-static const size_t VERT_COUNT = 8;
-static const size_t COLOR_COUNT = 8;
-static const size_t INDEX_COUNT = 3 * 2 * 6;
-
-static const glm::vec3 cube_vertices_base[VERT_COUNT] = {
-    glm::vec3( -1.f, -1.f, -1.f ), 
-    glm::vec3(  1.f, -1.f, -1.f ), 
-    glm::vec3(  1.f, -1.f,  1.f ), 
-    glm::vec3( -1.f, -1.f,  1.f ), 
-
-    glm::vec3( -1.f,  1.f, -1.f ),
-    glm::vec3(  1.f,  1.f, -1.f ),
-    glm::vec3(  1.f,  1.f,  1.f ),
-    glm::vec3( -1.f,  1.f,  1.f )
+const float cube_vert[] = {
+	-1.0f, -1.0f,  1.0f,	 1.0f, -1.0f,  1.0f,	-1.0f,  1.0f,  1.0f,	 1.0f,  1.0f,  1.0f,
+	-1.0f, -1.0f, -1.0f,	-1.0f,  1.0f, -1.0f,	 1.0f, -1.0f, -1.0f,	 1.0f,  1.0f, -1.0f,
+	-1.0f,  1.0f, -1.0f,	-1.0f,  1.0f,  1.0f,	 1.0f,  1.0f, -1.0f,	 1.0f,  1.0f,  1.0f,
+	-1.0f, -1.0f, -1.0f,	 1.0f, -1.0f, -1.0f,	-1.0f, -1.0f,  1.0f,	 1.0f, -1.0f,  1.0f,
+	 1.0f, -1.0f, -1.0f,	 1.0f,  1.0f, -1.0f,	 1.0f, -1.0f,  1.0f,	 1.0f,  1.0f,  1.0f,
+	-1.0f, -1.0f, -1.0f,	-1.0f, -1.0f,  1.0f,	-1.0f,  1.0f, -1.0f,	-1.0f,  1.0f,  1.0f,
 };
 
-static const GLuint cube_indices[INDEX_COUNT] = {
-    0, 1, 2, 2, 3, 0, // lower face
-    0, 7, 4, 0, 3, 7, // left face
-    0, 4, 5, 0, 5, 1, // back face
-    1, 5, 6, 1, 6, 2, // right face
-    2, 6, 7, 2, 7, 3, // front face
-    4, 7, 6, 4, 6, 5  // top face 
+const unsigned char cube_ind[] = {
+	0,  1,  2,    
+	2,  1,  3,
+
+	4,  5,  6,    
+	6,  5,  7,
+
+	8,  9,  10,    
+	10, 9,  11,
+
+	12, 13, 14,    
+	14, 13, 15,
+
+	16, 17, 18,    
+	18, 17, 19,
+
+	20, 21, 22,    
+	22, 21, 23
+};
+
+const float cube_norm[] = {
+	 0.0f, 0.0f, 1.0f,	 0.0f, 0.0f, 1.0f,	 0.0f, 0.0f, 1.0f,	 0.0f, 0.0f, 1.0f,
+	 0.0f, 0.0f,-1.0f,	 0.0f, 0.0f,-1.0f,	 0.0f, 0.0f,-1.0f,	 0.0f, 0.0f,-1.0f,
+	 0.0f, 1.0f, 0.0f,	 0.0f, 1.0f, 0.0f,	 0.0f, 1.0f, 0.0f,	 0.0f, 1.0f, 0.0f,
+	 0.0f,-1.0f, 0.0f,	 0.0f,-1.0f, 0.0f,	 0.0f,-1.0f, 0.0f,	 0.0f,-1.0f, 0.0f,
+	 1.0f, 0.0f, 0.0f,	 1.0f, 0.0f, 0.0f,	 1.0f, 0.0f, 0.0f,	 1.0f, 0.0f, 0.0f,
+	-1.0f, 0.0f, 0.0f,	-1.0f, 0.0f, 0.0f,	-1.0f, 0.0f, 0.0f,	-1.0f, 0.0f, 0.0f
 };
 
 Cube::Cube( GLfloat size_side, glm::vec3 color ) 
 {
-    vertices = new glm::vec3[VERT_COUNT];
-    colors = new glm::vec3[COLOR_COUNT];
-    indices = new GLuint[INDEX_COUNT];
-
+    vertices = new float[VERT_COUNT];
+    
     for (size_t i = 0; i < VERT_COUNT; i++)
     {
-        vertices[i] *= size_side / 2.f;
+        vertices[i] = cube_vert[i] * size_side / 2.f;
     }
-    for (size_t i = 0; i < COLOR_COUNT; i++)
+
+    colors = new float[VERT_COUNT];
+
+    for (size_t i = 0; i < VERT_COUNT; i+=3)
     {
-        colors[i] = color;
+        colors[i+0] = color.r;
+        colors[i+1] = color.g;
+        colors[i+2] = color.b;
     }
     
-    std::memcpy( indices, cube_indices, INDEX_COUNT * sizeof(GLuint) );
+    indices = cube_ind;
+    normals = cube_norm;
 }
 
 Cube::~Cube() 
 {
-    delete vertices;
-    delete colors;
-    delete indices;
+    delete[] vertices;
+    delete[] colors;
 }

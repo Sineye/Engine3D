@@ -6,9 +6,14 @@
 struct Cube
 {
 public:
-    glm::vec3 *vertices;
-    glm::vec3 *colors;
-    GLuint *indices;
+    const size_t VERT_COUNT = 24;
+    const size_t INDEX_COUNT = 36;
+
+    float *vertices;
+    float *colors;
+
+    const unsigned char *indices;
+    const float *normals;
 
 public:
     Cube( float size_side, glm::vec3 color );
