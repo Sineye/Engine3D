@@ -3,7 +3,6 @@
 #include "GameObjects/UpdatableObject.hpp"
 #include "GameObjects/DrawableObject.hpp"
 
-#include <SDL_image.h>
 #include <glm/ext.hpp>
 
 Engine * Engine::engine = nullptr;
@@ -11,8 +10,6 @@ Engine * Engine::engine = nullptr;
 Engine::Engine(const char * title, int x, int y, int w, int h, WindowMode window_mode, unsigned frame_rate)
 {
 	SDL_Init(SDL_INIT_EVERYTHING);
-
-	IMG_Init( IMG_INIT_JPG | IMG_INIT_PNG );
 
 	// after SDL init and before creating a window we need to tell SDL what version of OpenGL we want to use
 	SDL_GL_SetAttribute( SDL_GL_CONTEXT_MAJOR_VERSION, 1 );
@@ -55,6 +52,8 @@ Engine::Engine(const char * title, int x, int y, int w, int h, WindowMode window
 	glEnable(GL_COLOR_MATERIAL);
 	glColorMaterial(GL_FRONT, GL_AMBIENT_AND_DIFFUSE);
 
+	glEnable( GL_TEXTURE_2D );
+
 	camera.view_matrix = glm::mat4(1.f);
 	set_projection_mode( PROJECTION_PERSPECTIVE );
 
@@ -77,7 +76,6 @@ Engine::~Engine()
 	SDL_GL_DeleteContext( sdl_gl_context );
 	SDL_DestroyWindow(sdl_window);
 
-	IMG_Quit();
 	SDL_Quit();
 }
 
