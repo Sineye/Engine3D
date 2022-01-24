@@ -38,9 +38,22 @@ Engine::Engine(const char * title, int x, int y, int w, int h, WindowMode window
 	// set basic GL properties
 	glViewport( 0, 0, w, h );
 	glClearColor( 0.f, 0.f, 0.f, 1.f );
+
 	glEnable( GL_BLEND );
 	glBlendFunc( GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA );
+
 	glEnable( GL_DEPTH_TEST );
+
+	glEnable( GL_LIGHTING );
+	GLfloat lightAmb[] = {0.2f, 0.2f, 0.2f, 1.0f}; 
+	glLightModelfv(GL_LIGHT_MODEL_AMBIENT, lightAmb); // ambient lighting
+
+	GLfloat lightSpc[] = {1.f, 1.f, 1.f, 1.f};
+	glMaterialfv(GL_FRONT, GL_SPECULAR, lightSpc); // common specular material attribute
+	glMateriali(GL_FRONT, GL_SHININESS, 64); // common shininess material attribute
+
+	glEnable(GL_COLOR_MATERIAL);
+	glColorMaterial(GL_FRONT, GL_AMBIENT_AND_DIFFUSE);
 
 	set_projection_mode( PROJECTION_PERSPECTIVE );
 	glMatrixMode( GL_MODELVIEW );
@@ -229,7 +242,7 @@ void Engine::set_projection_mode( ProjectionMode mode )
 	}
 	else
 	{
-		m = glm::perspective( glm::radians( 120.f ), (float)w / (float)h, 0.1f, 100.f );
+		m = glm::perspective( glm::radians( 50.f ), (float)w / (float)h, 1.f, 100.f );
 		glLoadMatrixf( glm::value_ptr( m ) );
 	}
 }
