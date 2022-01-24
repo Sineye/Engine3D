@@ -33,26 +33,26 @@ const unsigned char cube_ind[] = {
 };
 
 const float cube_norm[] = {
-	 0.0f, 0.0f, 1.0f,	 0.0f, 0.0f, 1.0f,	 0.0f, 0.0f, 1.0f,	 0.0f, 0.0f, 1.0f,
-	 0.0f, 0.0f,-1.0f,	 0.0f, 0.0f,-1.0f,	 0.0f, 0.0f,-1.0f,	 0.0f, 0.0f,-1.0f,
-	 0.0f, 1.0f, 0.0f,	 0.0f, 1.0f, 0.0f,	 0.0f, 1.0f, 0.0f,	 0.0f, 1.0f, 0.0f,
-	 0.0f,-1.0f, 0.0f,	 0.0f,-1.0f, 0.0f,	 0.0f,-1.0f, 0.0f,	 0.0f,-1.0f, 0.0f,
-	 1.0f, 0.0f, 0.0f,	 1.0f, 0.0f, 0.0f,	 1.0f, 0.0f, 0.0f,	 1.0f, 0.0f, 0.0f,
-	-1.0f, 0.0f, 0.0f,	-1.0f, 0.0f, 0.0f,	-1.0f, 0.0f, 0.0f,	-1.0f, 0.0f, 0.0f
+	 0.0f,  0.0f,  1.0f,	 0.0f,  0.0f,  1.0f,	 0.0f,  0.0f,  1.0f,	 0.0f,  0.0f,  1.0f,
+	 0.0f,  0.0f, -1.0f,	 0.0f,  0.0f, -1.0f,	 0.0f,  0.0f, -1.0f,	 0.0f,  0.0f, -1.0f,
+	 0.0f,  1.0f,  0.0f,	 0.0f,  1.0f,  0.0f,	 0.0f,  1.0f,  0.0f,	 0.0f,  1.0f,  0.0f,
+	 0.0f, -1.0f,  0.0f,	 0.0f, -1.0f,  0.0f,	 0.0f, -1.0f,  0.0f,	 0.0f, -1.0f,  0.0f,
+	 1.0f,  0.0f,  0.0f,	 1.0f,  0.0f,  0.0f,	 1.0f,  0.0f,  0.0f,	 1.0f,  0.0f,  0.0f,
+	-1.0f,  0.0f,  0.0f,	-1.0f,  0.0f,  0.0f,	-1.0f,  0.0f,  0.0f,	-1.0f,  0.0f,  0.0f
 };
 
 Cube::Cube( GLfloat size_side, glm::vec3 color ) 
 {
-    vertices = new float[VERT_COUNT];
+    vertices = new float[VERT_COUNT * 3];
     
-    for (size_t i = 0; i < VERT_COUNT; i++)
+    for (size_t i = 0; i < VERT_COUNT * 3; i++)
     {
-        vertices[i] = cube_vert[i] * size_side / 2.f;
+        vertices[i] = cube_vert[i] * size_side / 2.f; // divide by 2 because by default sides are 2 in length
     }
 
-    colors = new float[VERT_COUNT];
+    colors = new float[VERT_COUNT * 3];
 
-    for (size_t i = 0; i < VERT_COUNT; i+=3)
+    for (size_t i = 0; i < VERT_COUNT * 3; i+=3)
     {
         colors[i+0] = color.r;
         colors[i+1] = color.g;
