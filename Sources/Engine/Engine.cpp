@@ -55,9 +55,8 @@ Engine::Engine(const char * title, int x, int y, int w, int h, WindowMode window
 	glEnable(GL_COLOR_MATERIAL);
 	glColorMaterial(GL_FRONT, GL_AMBIENT_AND_DIFFUSE);
 
+	camera.view_matrix = glm::mat4(1.f);
 	set_projection_mode( PROJECTION_PERSPECTIVE );
-	glMatrixMode( GL_MODELVIEW );
-	glLoadMatrixf( glm::value_ptr( glm::mat4(1.f) ) );
 
 	previous_time = 0;
 	target_time = 1000 / frame_rate;
@@ -233,16 +232,20 @@ void Engine::set_projection_mode( ProjectionMode mode )
 	int w, h;
 	SDL_GetWindowSize( sdl_window, &w, &h );
 
-	glMatrixMode( GL_PROJECTION );
-	glm::mat4 m;
 	if( mode == PROJECTION_ORTHOGRAPHIC )
 	{
-		m = glm::ortho( 0.f, (float)w, 0.f, (float)h, 0.1f, 100.f );
-		glLoadMatrixf( glm::value_ptr( m ) );
+		camera.proj_matrix = glm::ortho( 0.f, (float)w, 0.f, (float)h );
 	}
 	else
 	{
-		m = glm::perspective( glm::radians( 50.f ), (float)w / (float)h, 1.f, 100.f );
-		glLoadMatrixf( glm::value_ptr( m ) );
+		camera.proj_matrix = glm::perspective( glm::radians( 50.f ), (float)w / (float)h, 1.f, 100.f );
 	}
+
+	glMatrixMode( GL_PROJECTION );
+	glLoadMatrixf( glm::value_ptr( camera.proj_matrix ) );
+}
+
+Camera& Engine::get_camera() 
+{
+	return this->camera;
 }

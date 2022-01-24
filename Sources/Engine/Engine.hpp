@@ -7,6 +7,7 @@
 
 #include "Utility/Log.hpp"
 #include "GameObjects/GameObject.hpp"
+#include "Camera.hpp"
 
 #include <memory>
 #include <vector>
@@ -47,6 +48,9 @@ public:
 	void add_game_object( GameObject *go, bool renounce_ownership = true );
 
 	void set_projection_mode( ProjectionMode mode );
+
+	Camera& get_camera();
+	
 	
 public:
 	SDL_Window * sdl_window;
@@ -62,4 +66,6 @@ private:
 	
 	std::vector< std::shared_ptr<GameObject> > vec_game_objects;
 	void remove_dead_game_objects();
+
+	Camera camera;
 };

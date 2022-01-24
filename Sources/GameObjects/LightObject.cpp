@@ -21,7 +21,7 @@ void LightObject::update_attributes()
 
 void LightObject::draw() 
 {
-    // load_transformation();
+    load_transformation();
 
     glLightfv( light_num, GL_POSITION, glm::value_ptr( glm::vec4( translation, 1.f ) ) );
 }
