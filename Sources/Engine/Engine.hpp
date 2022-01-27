@@ -25,6 +25,12 @@ enum ProjectionMode
 	PROJECTION_PERSPECTIVE
 };
 
+enum ShadingMode
+{
+	SHADING_MODE_FLAT	= GL_FLAT,
+	SHADING_MODE_SMOOTH = GL_SMOOTH
+};
+
 class Engine
 {
 public:
@@ -50,6 +56,8 @@ public:
 	void set_projection_mode( ProjectionMode mode );
 
 	Camera& get_camera();
+
+	void set_shading_mode( ShadingMode mode );
 	
 	
 public:

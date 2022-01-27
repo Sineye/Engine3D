@@ -247,3 +247,8 @@ Camera& Engine::get_camera()
 {
 	return this->camera;
 }
+
+void Engine::set_shading_mode(ShadingMode mode) 
+{
+	glShadeModel(mode);
+}
