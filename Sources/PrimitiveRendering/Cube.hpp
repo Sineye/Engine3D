@@ -1,21 +1,25 @@
 #pragma once
 
+#include "Mesh.hpp"
+
 #include <GL/glew.h>
 #include <glm/glm.hpp>
 
-struct Cube
+class Cube : public IMesh
 {
 public:
     const size_t VERT_COUNT = 24;
     const size_t INDEX_COUNT = 36;
 
     float *vertices;
-    float *colors;
-
-    const unsigned char *indices;
-    const float *normals;
 
 public:
-    Cube( float size_side, glm::vec3 color );
+    Cube( float size_side );
     ~Cube();
+
+    const float *get_vertices() const override;
+    const unsigned int *get_indices() const override;
+    const unsigned int get_index_count() const override;
+
+    const float *get_normals() const override;
 };

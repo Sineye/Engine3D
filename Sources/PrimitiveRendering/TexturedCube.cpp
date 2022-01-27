@@ -12,8 +12,30 @@ const float cube_texc[] = {
 };
 
 
-TexturedCube::TexturedCube( float size_side, const char *img_path ) : Cube( size_side, glm::vec3() ) 
+TexturedCube::TexturedCube( float size_side, const char *img_path ) : Cube( size_side ) 
 {
-    tex_coords = cube_texc;
 	texture = ResourceManager::load_texture( img_path );
+}
+
+TexturedCube::~TexturedCube() 
+{
+	if( texture )
+	{
+		delete texture;
+	}
+}
+
+const float* TexturedCube::get_tex_coords() const 
+{
+	return cube_texc;
+}
+
+const GLuint TexturedCube::get_texture_id() const 
+{
+	if( texture )
+	{
+		return texture->get_id();
+	}
+
+	return 0;
 }

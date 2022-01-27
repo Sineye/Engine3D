@@ -1,6 +1,8 @@
 #include "LightingTest.hpp"
 
 #include "../Engine/Engine.hpp"
+#include "../PrimitiveRendering/TexturedCube.hpp"
+#include "../PrimitiveRendering/ColoredCube.hpp"
 
 #include <glm/gtx/transform.hpp>
 
@@ -16,7 +18,7 @@ LightingTest::LightingTest()
 	lightObj->enable();
 	lightObj->update_attributes();
 
-    cubeObj = std::make_shared<TexturedCubeObject>( 1.f, "../tyler.jpg" );
+    cubeObj = std::make_shared<MeshObject>( new TexturedCube( 1.f, "../tyler.jpg" ) );
     cubeObj->translation = { 0.f, 0.f, -4.f };
 
     Engine::get_instance()->add_game_object( lightObj );

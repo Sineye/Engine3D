@@ -3,7 +3,7 @@
 #include "../GameObjects/UpdatableObject.hpp"
 #include "../GameObjects/EventListeningObject.hpp"
 #include "../GameObjects/LightObject.hpp"
-#include "../GameObjects/TexturedCubeObject.hpp"
+#include "../GameObjects/MeshObject.hpp"
 
 #include <memory>
 
@@ -16,7 +16,7 @@ private:
     float camera_input;
 
     std::shared_ptr<LightObject> lightObj;
-    std::shared_ptr<TexturedCubeObject> cubeObj;
+    std::shared_ptr<MeshObject> cubeObj;
 
 public:
     LightingTest();

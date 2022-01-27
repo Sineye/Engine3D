@@ -1,8 +1,5 @@
 #include "Cube.hpp"
 
-#include <cstdlib>
-#include <cstring>
-
 const float cube_vert[] = {
 	-1.0f, -1.0f,  1.0f,	 1.0f, -1.0f,  1.0f,	-1.0f,  1.0f,  1.0f,	 1.0f,  1.0f,  1.0f,
 	-1.0f, -1.0f, -1.0f,	-1.0f,  1.0f, -1.0f,	 1.0f, -1.0f, -1.0f,	 1.0f,  1.0f, -1.0f,
@@ -12,7 +9,7 @@ const float cube_vert[] = {
 	-1.0f, -1.0f, -1.0f,	-1.0f, -1.0f,  1.0f,	-1.0f,  1.0f, -1.0f,	-1.0f,  1.0f,  1.0f,
 };
 
-const unsigned char cube_ind[] = {
+const unsigned int cube_ind[] = {
 	0,  1,  2,    
 	2,  1,  3,
 
@@ -41,7 +38,7 @@ const float cube_norm[] = {
 	-1.0f,  0.0f,  0.0f,	-1.0f,  0.0f,  0.0f,	-1.0f,  0.0f,  0.0f,	-1.0f,  0.0f,  0.0f
 };
 
-Cube::Cube( GLfloat size_side, glm::vec3 color ) 
+Cube::Cube( float size_side ) 
 {
     vertices = new float[VERT_COUNT * 3];
     
@@ -49,22 +46,29 @@ Cube::Cube( GLfloat size_side, glm::vec3 color )
     {
         vertices[i] = cube_vert[i] * size_side / 2.f; // divide by 2 because by default sides are 2 in length
     }
-
-    colors = new float[VERT_COUNT * 3];
-
-    for (size_t i = 0; i < VERT_COUNT * 3; i+=3)
-    {
-        colors[i+0] = color.r;
-        colors[i+1] = color.g;
-        colors[i+2] = color.b;
-    }
-    
-    indices = cube_ind;
-    normals = cube_norm;
 }
 
 Cube::~Cube() 
 {
     delete[] vertices;
-    delete[] colors;
+}
+
+const float* Cube::get_vertices() const 
+{
+	return vertices;
+}
+
+const unsigned int* Cube::get_indices() const 
+{
+	return cube_ind;
+}
+
+const float* Cube::get_normals() const 
+{
+	return cube_norm;
+}
+
+const unsigned int Cube::get_index_count() const
+{
+	return INDEX_COUNT;
 }
