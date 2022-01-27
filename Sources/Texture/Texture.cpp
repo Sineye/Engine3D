@@ -20,6 +20,7 @@ Texture::~Texture()
 bool Texture::load( const char *path ) 
 {
     int channel_count;
+    stbi_set_flip_vertically_on_load(true);
     unsigned char *data = stbi_load( path, &size.x, &size.y, &channel_count, 0 );
 
     if( data )

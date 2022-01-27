@@ -16,7 +16,7 @@ LightingTest::LightingTest()
 	lightObj->enable();
 	lightObj->update_attributes();
 
-    cubeObj = std::make_shared<TexturedCubeObject>( 1.f, "../tex0.tga" );
+    cubeObj = std::make_shared<TexturedCubeObject>( 1.f, "../tyler.jpg" );
     cubeObj->translation = { 0.f, 0.f, -4.f };
 
     Engine::get_instance()->add_game_object( lightObj );
