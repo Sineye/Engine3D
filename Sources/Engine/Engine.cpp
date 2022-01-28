@@ -2,8 +2,9 @@
 #include "GameObjects/EventListeningObject.hpp"
 #include "GameObjects/UpdatableObject.hpp"
 #include "GameObjects/DrawableObject.hpp"
+#include "GameObjects/CameraController.hpp"
 
-#include <SDL_image.h>
+#include <glm/ext.hpp>
 
 Engine * Engine::engine = nullptr;
 
@@ -11,9 +12,11 @@ Engine::Engine(const char * title, int x, int y, int w, int h, WindowMode window
 {
 	SDL_Init(SDL_INIT_EVERYTHING);
 
-	IMG_Init( IMG_INIT_JPG | IMG_INIT_PNG );
+	// after SDL init and before creating a window we need to tell SDL what version of OpenGL we want to use
+	SDL_GL_SetAttribute( SDL_GL_CONTEXT_MAJOR_VERSION, 1 );
+	SDL_GL_SetAttribute( SDL_GL_CONTEXT_MINOR_VERSION, 1 );
 
-	sdl_window = SDL_CreateWindow(title, x, y, w, h, window_mode);
+	sdl_window = SDL_CreateWindow(title, x, y, w, h, window_mode | SDL_WINDOW_OPENGL );
 	if (!sdl_window)
 	{
 		LOG("Unable to create window.");
@@ -21,28 +24,60 @@ Engine::Engine(const char * title, int x, int y, int w, int h, WindowMode window
 		exit(EXIT_FAILURE);
 	}
 
-	sdl_renderer = SDL_CreateRenderer(sdl_window, -1, 0);
-		if (!sdl_window)
+	// we also need to explicitly create a context for OpenGL operations (and make it current)
+	sdl_gl_context = SDL_GL_CreateContext( sdl_window );
+	if( !sdl_gl_context )
 	{
-		LOG("Unable to create renderer.");
+		LOG("Unable to create GL context.");
 		LOG(SDL_GetError());
 		exit(EXIT_FAILURE);
 	}
+
+	// set basic GL properties
+	glViewport( 0, 0, w, h );
+	glClearColor( 0.f, 0.f, 0.f, 1.f );
+
+	glEnable( GL_BLEND );
+	glBlendFunc( GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA );
+
+	glEnable( GL_DEPTH_TEST );
+
+	glEnable( GL_LIGHTING );
+	GLfloat lightAmb[] = {0.2f, 0.2f, 0.2f, 1.0f}; 
+	glLightModelfv(GL_LIGHT_MODEL_AMBIENT, lightAmb); // ambient lighting
+
+	GLfloat lightSpc[] = {1.f, 1.f, 1.f, 1.f};
+	glMaterialfv(GL_FRONT, GL_SPECULAR, lightSpc); // common specular material attribute
+	glMateriali(GL_FRONT, GL_SHININESS, 64); // common shininess material attribute
+
+	glEnable(GL_COLOR_MATERIAL);
+	glColorMaterial(GL_FRONT, GL_AMBIENT_AND_DIFFUSE);
+
+	glEnable( GL_TEXTURE_2D );
+
+	set_projection_mode( PROJECTION_PERSPECTIVE );
 
 	previous_time = 0;
 	target_time = 1000 / frame_rate;
 
 	is_running = true;
+
+	GLenum err =  glGetError();
+	if( err != GL_NO_ERROR )
+	{
+		LOG( gluErrorString(err) );
+	}
+
+	add_game_object( new CameraController() );
 }
 
 Engine::~Engine()
 {
 	vec_game_objects.clear();
 
-	SDL_DestroyRenderer(sdl_renderer);
+	SDL_GL_DeleteContext( sdl_gl_context );
 	SDL_DestroyWindow(sdl_window);
 
-	IMG_Quit();
 	SDL_Quit();
 }
 
@@ -126,12 +161,14 @@ void Engine::update()
 			updatable->update( target_time );
 		}
 	}
+
+	camera.update_view_matrix();
 }
 
 void Engine::draw()
 {
-	SDL_RenderClear( sdl_renderer );
-
+	glClear( GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT );
+	
 	DrawableObject *dob;
 
 	for( int i = 0; i < vec_game_objects.size(); i++ )
@@ -144,7 +181,7 @@ void Engine::draw()
 		}
 	}
 
-	SDL_RenderPresent(sdl_renderer);
+	SDL_GL_SwapWindow( sdl_window );
 }
 
 void Engine::add_game_object( std::shared_ptr<GameObject> go ) 
@@ -153,6 +190,7 @@ void Engine::add_game_object( std::shared_ptr<GameObject> go )
 	{
 		vec_game_objects.push_back( go );
 	}
+	
 }
 
 void Engine::add_game_object( GameObject *go, bool renounce_ownership ) 
@@ -189,4 +227,29 @@ void Engine::remove_dead_game_objects()
 			++it;
 		}
 	}
+}
+
+void Engine::set_projection_mode( ProjectionMode mode ) 
+{
+	int w, h;
+	SDL_GetWindowSize( sdl_window, &w, &h );
+
+	if( mode == PROJECTION_ORTHOGRAPHIC )
+	{
+		camera.set_projection_matrix( glm::ortho( 0.f, (float)w, 0.f, (float)h, 1.f, 100.f ) );
+	}
+	else
+	{
+		camera.set_projection_matrix( glm::perspective( glm::radians( 50.f ), (float)w / (float)h, 1.f, 100.f ) );
+	}
+}
+
+Camera& Engine::get_camera() 
+{
+	return this->camera;
+}
+
+void Engine::set_shading_mode(ShadingMode mode) 
+{
+	glShadeModel(mode);
 }
