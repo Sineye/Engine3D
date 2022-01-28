@@ -15,6 +15,7 @@ public:
 public:
     TransformableObject();
 
+    glm::mat4 get_transformation() const;
     void load_transformation();
 };
 

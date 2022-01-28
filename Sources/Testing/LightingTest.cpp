@@ -3,8 +3,11 @@
 #include "../Engine/Engine.hpp"
 #include "../PrimitiveRendering/TexturedCube.hpp"
 #include "../PrimitiveRendering/ColoredCube.hpp"
+#include "../PrimitiveRendering/PrimitiveRenderer.hpp"
+#include "../GameObjects/SimpleDrawableObject.hpp"
 
 #include <glm/gtx/transform.hpp>
+#include <glm/gtc/type_ptr.hpp>
 
 LightingTest::LightingTest() 
 {
@@ -13,7 +16,7 @@ LightingTest::LightingTest()
     lightObj = std::make_shared<LightObject>( GL_LIGHT0 );
     lightObj->translation = { 2.f, 2.f, 0.f };
 	lightObj->ambient = { 0.1f, 0.1f, 0.1f, 1.f };
-	lightObj->diffuse = { 0.7f, 0.7f, 0.7f, 1.f };
+	lightObj->diffuse = { 1.f, 1.f, 1.f, 1.f };
 	lightObj->specular = { 1.f, 1.f, 1.f, 1.f };
 	lightObj->enable();
 	lightObj->update_attributes();
@@ -23,6 +26,20 @@ LightingTest::LightingTest()
 
     Engine::get_instance()->add_game_object( lightObj );
     Engine::get_instance()->add_game_object( cubeObj );
+    Engine::get_instance()->add_game_object( new SimpleDrawableObject(
+        [] {
+            glMatrixMode( GL_MODELVIEW );
+            glLoadMatrixf( glm::value_ptr( Engine::get_instance()->get_camera().get_view_matrix() ) );
+
+            PrimitiveRenderer::draw_quad(
+                {-25.f, -1.f, -25.f },
+                { 25.f, -1.f, -25.f },
+                { 25.f, -1.f,  25.f },
+                {-25.f, -1.f,  25.f },
+                {0.9f, 0.9f, 0.9f}
+            );
+        }
+    ));
 
     Engine::get_instance()->get_camera().set_yaw( -90.f );
 }

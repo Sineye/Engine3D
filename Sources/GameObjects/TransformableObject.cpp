@@ -13,11 +13,15 @@ TransformableObject::TransformableObject()
     rotation = glm::mat4(1.f);
 }
 
-void TransformableObject::load_transformation() 
+glm::mat4 TransformableObject::get_transformation() const
 {
     auto& cam = Engine::get_instance()->get_camera();
 
+    return cam.get_view_matrix() * glm::translate( translation ) * rotation * glm::scale( scale );
+}
+
+void TransformableObject::load_transformation() 
+{
     glMatrixMode( GL_MODELVIEW );
-	glm::mat4 m = cam.get_view_matrix() *  glm::translate( translation ) * rotation * glm::scale( scale );
-	glLoadMatrixf( glm::value_ptr(m) );
+	glLoadMatrixf( glm::value_ptr( get_transformation() ) );
 }
