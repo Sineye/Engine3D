@@ -15,7 +15,10 @@ private:
 
     std::shared_ptr<LightObject> lightObj;
     std::shared_ptr<MeshObject> cubeObj;
+
     std::shared_ptr<MeshObject> sphereObj;
+    std::shared_ptr<LightObject> sphereLight;
+    float sphere_angle;
 
 public:
     LightingTest();
