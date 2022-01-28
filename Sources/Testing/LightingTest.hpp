@@ -11,7 +11,7 @@ class LightingTest : virtual public UpdatableObject, virtual public EventListeni
 {
 private:
     float cube_angle;
-    float cube_input;
+    glm::vec2 cube_input; // x for rotation, y for scale
 
     std::shared_ptr<LightObject> lightObj;
     std::shared_ptr<MeshObject> cubeObj;

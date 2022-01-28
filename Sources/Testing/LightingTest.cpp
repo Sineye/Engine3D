@@ -12,7 +12,8 @@
 
 LightingTest::LightingTest() 
 {
-    cube_angle = cube_input = 0.f;
+    cube_angle =  0.f;
+    cube_input = { 0.f, 0.f };
 
     lightObj = std::make_shared<LightObject>( GL_LIGHT0 );
     lightObj->translation = { 4.f, 5.f, -5.f };
@@ -64,7 +65,7 @@ LightingTest::LightingTest()
 
 void LightingTest::update( uint32_t dt ) 
 {
-    cube_angle += cube_input * 33.f * (float)dt / 1000.f;
+    cube_angle += cube_input.x * 33.f * (float)dt / 1000.f;
     if( cube_angle > 360.f )
     {
         cube_angle -= 360.f;
@@ -72,6 +73,7 @@ void LightingTest::update( uint32_t dt )
     
     auto m = glm::rotate( glm::radians(cube_angle), glm::vec3(0, 1, 0) );
     cubeObj->rotation = m;
+    cubeObj->scale += cube_input.y * (float)dt / 1000.f;
 
 
     sphere_angle += 33.f * (float)dt / 1000.f;
@@ -97,10 +99,16 @@ void LightingTest::handle_event( const SDL_Event& e )
         switch( e.key.keysym.sym )
         {
             case SDLK_LEFT:
-                cube_input = -1.f;
+                cube_input.x = -1.f;
                 break;
             case SDLK_RIGHT:
-                cube_input = 1.f;
+                cube_input.x = 1.f;
+                break;
+            case SDLK_UP:
+                cube_input.y = 1.f;
+                break;
+            case SDLK_DOWN:
+                cube_input.y = -1.f;
                 break;
             case SDLK_z:
                 Engine::get_instance()->set_projection_mode( PROJECTION_ORTHOGRAPHIC );
@@ -116,7 +124,11 @@ void LightingTest::handle_event( const SDL_Event& e )
         {
             case SDLK_LEFT:
             case SDLK_RIGHT:
-                cube_input = 0.f;
+                cube_input.x = 0.f;
+                break;
+            case SDLK_UP:
+            case SDLK_DOWN:
+                cube_input.y = 0.f;
                 break;
         }
     }
