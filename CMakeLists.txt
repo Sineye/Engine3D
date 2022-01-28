@@ -43,6 +43,7 @@ add_library(${PROJECT_NAME} STATIC
     ${CMAKE_CURRENT_SOURCE_DIR}/Sources/PrimitiveRendering/Cube.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/Sources/PrimitiveRendering/ColoredCube.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/Sources/PrimitiveRendering/TexturedCube.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/Sources/PrimitiveRendering/Sphere.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/Sources/GameObjects/MeshObject.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/Sources/GameObjects/LightObject.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/Sources/GameObjects/CameraController.cpp

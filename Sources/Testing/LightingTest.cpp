@@ -5,6 +5,7 @@
 #include "../PrimitiveRendering/ColoredCube.hpp"
 #include "../PrimitiveRendering/PrimitiveRenderer.hpp"
 #include "../GameObjects/SimpleDrawableObject.hpp"
+#include "../PrimitiveRendering/Sphere.hpp"
 
 #include <glm/gtx/transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
@@ -41,6 +42,11 @@ LightingTest::LightingTest()
         }
     ));
 
+    sphereObj = std::make_shared<MeshObject>( new Sphere( 1.f, 36, 18, glm::vec3( 0.8f, 0.8f, 0.8f ) ) );
+    sphereObj->translation = { -4.f, 0.f, -4.f };
+    Engine::get_instance()->add_game_object( sphereObj );
+
+
     Engine::get_instance()->get_camera().set_yaw( -90.f );
 }
 
@@ -54,18 +60,6 @@ void LightingTest::update( uint32_t dt )
     
     auto m = glm::rotate( glm::radians(cube_angle), glm::vec3(0, 1, 0) );
     cubeObj->rotation = m;
-
-
-    // camera_angle += camera_input * 33.f * (float)dt / 1000.f;
-    // if( camera_angle > 360.f )
-    // {
-    //     camera_angle -= 360.f;
-    // }
-
-    // m = glm::translate( cubeObj->translation );
-    // m = glm::rotate( m, glm::radians(camera_angle), glm::vec3(0, 1, 0) );
-    // m = glm::translate( m, glm::vec3(0, 0, 5) );
-    // Engine::get_instance()->get_camera().view_matrix = m;
 }
 
 void LightingTest::handle_event( const SDL_Event& e ) 
