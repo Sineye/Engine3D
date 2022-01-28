@@ -2,6 +2,7 @@
 #include "GameObjects/EventListeningObject.hpp"
 #include "GameObjects/UpdatableObject.hpp"
 #include "GameObjects/DrawableObject.hpp"
+#include "GameObjects/CameraController.hpp"
 
 #include <glm/ext.hpp>
 
@@ -54,7 +55,6 @@ Engine::Engine(const char * title, int x, int y, int w, int h, WindowMode window
 
 	glEnable( GL_TEXTURE_2D );
 
-	camera.view_matrix = glm::mat4(1.f);
 	set_projection_mode( PROJECTION_PERSPECTIVE );
 
 	previous_time = 0;
@@ -67,6 +67,8 @@ Engine::Engine(const char * title, int x, int y, int w, int h, WindowMode window
 	{
 		LOG( gluErrorString(err) );
 	}
+
+	add_game_object( new CameraController() );
 }
 
 Engine::~Engine()
@@ -159,6 +161,8 @@ void Engine::update()
 			updatable->update( target_time );
 		}
 	}
+
+	camera.update_view_matrix();
 }
 
 void Engine::draw()
@@ -232,15 +236,12 @@ void Engine::set_projection_mode( ProjectionMode mode )
 
 	if( mode == PROJECTION_ORTHOGRAPHIC )
 	{
-		camera.proj_matrix = glm::ortho( 0.f, (float)w, 0.f, (float)h );
+		camera.set_projection_matrix( glm::ortho( 0.f, (float)w, 0.f, (float)h, 1.f, 100.f ) );
 	}
 	else
 	{
-		camera.proj_matrix = glm::perspective( glm::radians( 50.f ), (float)w / (float)h, 1.f, 100.f );
+		camera.set_projection_matrix( glm::perspective( glm::radians( 50.f ), (float)w / (float)h, 1.f, 100.f ) );
 	}
-
-	glMatrixMode( GL_PROJECTION );
-	glLoadMatrixf( glm::value_ptr( camera.proj_matrix ) );
 }
 
 Camera& Engine::get_camera() 

@@ -1,8 +1,10 @@
 cmake_minimum_required(VERSION 3.0.0)
 project(Engine3D VERSION 0.1.0)
+set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 
 include(FetchContent)
+set(FETCHCONTENT_UPDATES_DISCONNECTED ON)
 
 FetchContent_Declare(
     SDL2
@@ -29,7 +31,9 @@ find_package(GLEW REQUIRED)
 
 
 add_library(${PROJECT_NAME} STATIC
+    ${CMAKE_CURRENT_SOURCE_DIR}/Sources/External/stb_image.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/Sources/Engine/Engine.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/Sources/Engine/Camera.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/Sources/GameObjects/GameObject.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/Sources/GameObjects/TransformableObject.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/Sources/GameObjects/SimpleEventListeningObject.cpp
@@ -41,7 +45,7 @@ add_library(${PROJECT_NAME} STATIC
     ${CMAKE_CURRENT_SOURCE_DIR}/Sources/PrimitiveRendering/TexturedCube.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/Sources/GameObjects/MeshObject.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/Sources/GameObjects/LightObject.cpp
-    ${CMAKE_CURRENT_SOURCE_DIR}/Sources/External/stb_image.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/Sources/GameObjects/CameraController.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/Sources/Texture/Texture.cpp
 )
 
