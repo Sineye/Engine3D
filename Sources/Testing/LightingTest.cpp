@@ -12,7 +12,7 @@
 
 LightingTest::LightingTest() 
 {
-    cube_angle = cube_input = camera_angle = camera_input = 0.f;
+    cube_angle = cube_input = 0.f;
 
     lightObj = std::make_shared<LightObject>( GL_LIGHT0 );
     lightObj->translation = { 2.f, 2.f, 0.f };
@@ -37,7 +37,7 @@ LightingTest::LightingTest()
                 { 25.f, -1.f, -25.f },
                 { 25.f, -1.f,  25.f },
                 {-25.f, -1.f,  25.f },
-                {0.9f, 0.9f, 0.9f}
+                {0.f, 0.8f, 1.f}
             );
         }
     ));
@@ -74,12 +74,6 @@ void LightingTest::handle_event( const SDL_Event& e )
             case SDLK_RIGHT:
                 cube_input = 1.f;
                 break;
-            case SDLK_a:
-                camera_input = -1.f;
-                break;
-            case SDLK_d:
-                camera_input = 1.f;
-                break;
             case SDLK_z:
                 Engine::get_instance()->set_projection_mode( PROJECTION_ORTHOGRAPHIC );
                 break;
@@ -95,10 +89,6 @@ void LightingTest::handle_event( const SDL_Event& e )
             case SDLK_LEFT:
             case SDLK_RIGHT:
                 cube_input = 0.f;
-                break;
-            case SDLK_a:
-            case SDLK_d:
-                camera_input = 0.f;
                 break;
         }
     }

@@ -12,8 +12,6 @@ class LightingTest : virtual public UpdatableObject, virtual public EventListeni
 private:
     float cube_angle;
     float cube_input;
-    float camera_angle;
-    float camera_input;
 
     std::shared_ptr<LightObject> lightObj;
     std::shared_ptr<MeshObject> cubeObj;
