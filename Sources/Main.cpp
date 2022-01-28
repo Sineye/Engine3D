@@ -11,7 +11,7 @@
 
 int main()
 {
-    Engine * engine = Engine::get_instance("Engine3D", 64, 64, 512, 512, WINDOWED_MODE, 60);
+    Engine * engine = Engine::get_instance("Engine3D", 64, 64, 1024, 1024, WINDOWED_MODE, 60);
 
 #ifdef ENABLE_TESTING
 	engine->add_game_object( new LightingTest() );

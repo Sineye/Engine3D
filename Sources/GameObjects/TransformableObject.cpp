@@ -18,6 +18,6 @@ void TransformableObject::load_transformation()
     auto& cam = Engine::get_instance()->get_camera();
 
     glMatrixMode( GL_MODELVIEW );
-	glm::mat4 m = cam.view_matrix *  glm::translate( translation ) * rotation * glm::scale( scale );
+	glm::mat4 m = cam.get_view_matrix() *  glm::translate( translation ) * rotation * glm::scale( scale );
 	glLoadMatrixf( glm::value_ptr(m) );
 }
