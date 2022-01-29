@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Engine3D: Plik źródłowy Sources/PrimitiveRendering/Mesh.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Engine3D
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Projekt szkieletu silnika 3D z pomocą API OpenGL</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Szukaj');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_937900b87e0c7a5fa01190c395fb83f7.html">Sources</a></li><li class="navelem"><a class="el" href="dir_33e0883d469fc612bc2d3af7c99a9007.html">PrimitiveRendering</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Mesh.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_mesh_8hpp.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;GL/glew.h&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="class_i_mesh.html">   15</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_i_mesh.html">IMesh</a></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">float</span> *<a class="code" href="class_i_mesh.html#a497d3f695140f07dac5ea626ec4a010a">get_vertices</a>() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> *<a class="code" href="class_i_mesh.html#a032107fed2f5b091da4058064d5520a1">get_indices</a>() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="class_i_mesh.html#a8a7e665a5174653ff3e38da9bea2136e">get_index_count</a>() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">float</span> *<a class="code" href="class_i_mesh.html#ad277cf8b1bb17b31c82120fc3be5951e">get_colors</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">float</span> *<a class="code" href="class_i_mesh.html#abebc98f4eac499d4df10335c6ebd3d54">get_normals</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keyword">virtual</span> <span class="keyword">const</span> GLuint <a class="code" href="class_i_mesh.html#aafa49093f8b5ee7d9a4d30f7209e8437">get_texture_id</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">float</span> *<a class="code" href="class_i_mesh.html#ad81442061d9fe864e1cba65ec5f9477e">get_tex_coords</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;};</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_i_mesh_html_aafa49093f8b5ee7d9a4d30f7209e8437"><div class="ttname"><a href="class_i_mesh.html#aafa49093f8b5ee7d9a4d30f7209e8437">IMesh::get_texture_id</a></div><div class="ttdeci">virtual const GLuint get_texture_id() const</div><div class="ttdoc">Zwraca ID tekstury przypisanej do bryły.</div><div class="ttdef"><b>Definition:</b> Mesh.cpp:18</div></div>
+<div class="ttc" id="aclass_i_mesh_html_a032107fed2f5b091da4058064d5520a1"><div class="ttname"><a href="class_i_mesh.html#a032107fed2f5b091da4058064d5520a1">IMesh::get_indices</a></div><div class="ttdeci">virtual const unsigned int * get_indices() const =0</div><div class="ttdoc">Zwraca wskaźnik na indeksy wierzchołków bryły.</div></div>
+<div class="ttc" id="aclass_i_mesh_html_a497d3f695140f07dac5ea626ec4a010a"><div class="ttname"><a href="class_i_mesh.html#a497d3f695140f07dac5ea626ec4a010a">IMesh::get_vertices</a></div><div class="ttdeci">virtual const float * get_vertices() const =0</div><div class="ttdoc">Zwraca wskaźnik na pozycje wierzchołków bryły.</div></div>
+<div class="ttc" id="aclass_i_mesh_html_ad81442061d9fe864e1cba65ec5f9477e"><div class="ttname"><a href="class_i_mesh.html#ad81442061d9fe864e1cba65ec5f9477e">IMesh::get_tex_coords</a></div><div class="ttdeci">virtual const float * get_tex_coords() const</div><div class="ttdoc">Zwraca wskaźnik na koordynaty teksturowe dla wierzchołków bryły.</div><div class="ttdef"><b>Definition:</b> Mesh.cpp:13</div></div>
+<div class="ttc" id="aclass_i_mesh_html_ad277cf8b1bb17b31c82120fc3be5951e"><div class="ttname"><a href="class_i_mesh.html#ad277cf8b1bb17b31c82120fc3be5951e">IMesh::get_colors</a></div><div class="ttdeci">virtual const float * get_colors() const</div><div class="ttdoc">Zwraca wskaźnik na kolory wierzchołków bryły.</div><div class="ttdef"><b>Definition:</b> Mesh.cpp:3</div></div>
+<div class="ttc" id="aclass_i_mesh_html_a8a7e665a5174653ff3e38da9bea2136e"><div class="ttname"><a href="class_i_mesh.html#a8a7e665a5174653ff3e38da9bea2136e">IMesh::get_index_count</a></div><div class="ttdeci">virtual const unsigned int get_index_count() const =0</div><div class="ttdoc">Zwraca ilość indeksów dla wierzchołków bryły.</div></div>
+<div class="ttc" id="aclass_i_mesh_html"><div class="ttname"><a href="class_i_mesh.html">IMesh</a></div><div class="ttdoc">Interfejs dla brył geometrycznych.</div><div class="ttdef"><b>Definition:</b> Mesh.hpp:15</div></div>
+<div class="ttc" id="aclass_i_mesh_html_abebc98f4eac499d4df10335c6ebd3d54"><div class="ttname"><a href="class_i_mesh.html#abebc98f4eac499d4df10335c6ebd3d54">IMesh::get_normals</a></div><div class="ttdeci">virtual const float * get_normals() const</div><div class="ttdoc">Zwraca wskaźnik na wektory normalne bryły.</div><div class="ttdef"><b>Definition:</b> Mesh.cpp:8</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano przez &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

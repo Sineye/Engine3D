@@ -1,0 +1,6 @@
+<map id="TexturedCube" name="TexturedCube">
+<area shape="rect" id="node1" title="Klasa przechowująca dane oteksturowanego sześcianu." alt="" coords="25,171,127,197"/>
+<area shape="rect" id="node2" href="$class_cube.html" title="Klasa przechowująca dane geometryczne sześcianu." alt="" coords="8,81,61,108"/>
+<area shape="rect" id="node3" href="$class_i_mesh.html" title="Interfejs dla brył geometrycznych." alt="" coords="5,5,64,32"/>
+<area shape="rect" id="node4" href="$class_texture.html" title="Klasa reprezentująca teksturę" alt="" coords="86,81,151,108"/>
+</map>

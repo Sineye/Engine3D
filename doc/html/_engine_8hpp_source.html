@@ -1,0 +1,189 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Engine3D: Plik źródłowy Sources/Engine/Engine.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Engine3D
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Projekt szkieletu silnika 3D z pomocą API OpenGL</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Szukaj');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_937900b87e0c7a5fa01190c395fb83f7.html">Sources</a></li><li class="navelem"><a class="el" href="dir_994fef7c0932fcfe306300c8dd0cc8a7.html">Engine</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Engine.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_engine_8hpp.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">// these SDL and GL includes have to be in this very specific order, DON&#39;T CHANGE IT!</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;SDL.h&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;GL/glew.h&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;SDL_opengl.h&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_log_8hpp.html">Utility/Log.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_game_object_8hpp.html">GameObjects/GameObject.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_camera_8hpp.html">Camera.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="_engine_8hpp.html#a5773202ab7ffd1746de9d527927198a3">   25</a></span>&#160;<span class="keyword">enum</span> <a class="code" href="_engine_8hpp.html#a5773202ab7ffd1746de9d527927198a3">WindowMode</a></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;{</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="_engine_8hpp.html#a5773202ab7ffd1746de9d527927198a3ae8ecc2c5fc3095b906ed6ee57b3f8156">   30</a></span>&#160;    <a class="code" href="_engine_8hpp.html#a5773202ab7ffd1746de9d527927198a3ae8ecc2c5fc3095b906ed6ee57b3f8156">WINDOWED_MODE</a>,</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="_engine_8hpp.html#a5773202ab7ffd1746de9d527927198a3a720ac26931ee70737a684b60042c3227">   34</a></span>&#160;    <a class="code" href="_engine_8hpp.html#a5773202ab7ffd1746de9d527927198a3a720ac26931ee70737a684b60042c3227">BORDERLESS_MODE</a> = SDL_WINDOW_FULLSCREEN_DESKTOP,</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="_engine_8hpp.html#a5773202ab7ffd1746de9d527927198a3a322281fd8bd9d95fb410b43ac9d496a3">   38</a></span>&#160;    <a class="code" href="_engine_8hpp.html#a5773202ab7ffd1746de9d527927198a3a322281fd8bd9d95fb410b43ac9d496a3">FULLSCREEN_MODE</a> = SDL_WINDOW_FULLSCREEN</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;};</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="_engine_8hpp.html#a635428fef8d6e4afba288610c9c65bd5">   45</a></span>&#160;<span class="keyword">enum</span> <a class="code" href="_engine_8hpp.html#a635428fef8d6e4afba288610c9c65bd5">ProjectionMode</a></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;{</div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="_engine_8hpp.html#a635428fef8d6e4afba288610c9c65bd5ac861173ef518ed9619c9f8d649bb0845">   50</a></span>&#160;    <a class="code" href="_engine_8hpp.html#a635428fef8d6e4afba288610c9c65bd5ac861173ef518ed9619c9f8d649bb0845">PROJECTION_ORTHOGRAPHIC</a>,</div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="_engine_8hpp.html#a635428fef8d6e4afba288610c9c65bd5a285bf91b4f077da1e28d8494234bf209">   54</a></span>&#160;    <a class="code" href="_engine_8hpp.html#a635428fef8d6e4afba288610c9c65bd5a285bf91b4f077da1e28d8494234bf209">PROJECTION_PERSPECTIVE</a></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;};</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="_engine_8hpp.html#a474716bb9224d44d614704a0bd331d99">   60</a></span>&#160;<span class="keyword">enum</span> <a class="code" href="_engine_8hpp.html#a474716bb9224d44d614704a0bd331d99">ShadingMode</a></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;{</div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="_engine_8hpp.html#a474716bb9224d44d614704a0bd331d99a49660b029a26b6d3962b98f99d50c1c8">   65</a></span>&#160;    <a class="code" href="_engine_8hpp.html#a474716bb9224d44d614704a0bd331d99a49660b029a26b6d3962b98f99d50c1c8">SHADING_MODE_FLAT</a>   = GL_FLAT,</div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="_engine_8hpp.html#a474716bb9224d44d614704a0bd331d99a1842e59402ce78fe0abef3a8eb6436ca">   69</a></span>&#160;    <a class="code" href="_engine_8hpp.html#a474716bb9224d44d614704a0bd331d99a1842e59402ce78fe0abef3a8eb6436ca">SHADING_MODE_SMOOTH</a> = GL_SMOOTH</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;};</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="class_engine.html">   75</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_engine.html">Engine</a></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;{</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keyword">static</span> <a class="code" href="class_engine.html">Engine</a> * <a class="code" href="class_engine.html#a292e2ffc09ea8a989d1ec0814b80176e">get_instance</a>();</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keyword">static</span> <a class="code" href="class_engine.html">Engine</a> * <a class="code" href="class_engine.html#a292e2ffc09ea8a989d1ec0814b80176e">get_instance</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> * title, <span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <span class="keywordtype">int</span> w, <span class="keywordtype">int</span> h, <a class="code" href="_engine_8hpp.html#a5773202ab7ffd1746de9d527927198a3">WindowMode</a> window_mode, <span class="keywordtype">unsigned</span> frame_rate);</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <a class="code" href="class_engine.html#a8ef7030a089ecb30bbfcb9e43094717a">~Engine</a>();</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
+<div class="line"><a name="l00106"></a><span class="lineno"><a class="line" href="class_engine.html#ad0106de4cd5aaf9e5f403b91d2a68203">  106</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_engine.html#ad0106de4cd5aaf9e5f403b91d2a68203">is_running</a>;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_engine.html#a5aef5077f2c3e895491fb9db6bce204d">schedule</a>();</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_engine.html#a14bb7469724b19d6c07742b86cf22918">process_events</a>();</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_engine.html#ad2ff110d5a86c1cd60b541d65915ac48">update</a>();</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_engine.html#a1b654dc41dfbcb5072147f33142b726e">draw</a>();</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160; </div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_engine.html#adac3c648ee7e39e1ab9ea745ad5c60da">add_game_object</a>( std::shared_ptr&lt;GameObject&gt; go );</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <span class="comment">// Adds object to engine&#39;s game object pool</span></div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    <span class="comment">// If you want the engine to let go of ther pointer, set is_alive to false in the object</span></div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    <span class="comment">// Depending on renounce_ownership value, takes the ownership or only weakly references the pointer</span></div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160; </div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_engine.html#adac3c648ee7e39e1ab9ea745ad5c60da">add_game_object</a>( <a class="code" href="class_game_object.html">GameObject</a> *go, <span class="keywordtype">bool</span> renounce_ownership = <span class="keyword">true</span> );</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160; </div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_engine.html#a9368c9ca224b4162d99c7b82712d09f9">set_projection_mode</a>( <a class="code" href="_engine_8hpp.html#a635428fef8d6e4afba288610c9c65bd5">ProjectionMode</a> mode );</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160; </div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    <a class="code" href="class_camera.html">Camera</a>&amp; <a class="code" href="class_engine.html#a4e2c27e724da8b1c98552618e490cf18">get_camera</a>();</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160; </div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_engine.html#ac0ef40c4bc56b6eb11c949b4294c6dd9">set_shading_mode</a>( <a class="code" href="_engine_8hpp.html#a474716bb9224d44d614704a0bd331d99">ShadingMode</a> mode );</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    </div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    </div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00167"></a><span class="lineno"><a class="line" href="class_engine.html#ad9bf048060a748dd521acf557dcffc9e">  167</a></span>&#160;    SDL_Window * <a class="code" href="class_engine.html#ad9bf048060a748dd521acf557dcffc9e">sdl_window</a>;</div>
+<div class="line"><a name="l00171"></a><span class="lineno"><a class="line" href="class_engine.html#aa60c14e3ed97ad7d032f6e5088e6ffc9">  171</a></span>&#160;    SDL_GLContext <a class="code" href="class_engine.html#aa60c14e3ed97ad7d032f6e5088e6ffc9">sdl_gl_context</a>;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160; </div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160; </div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    <a class="code" href="class_engine.html">Engine</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> * title, <span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <span class="keywordtype">int</span> w, <span class="keywordtype">int</span> h, <a class="code" href="_engine_8hpp.html#a5773202ab7ffd1746de9d527927198a3">WindowMode</a> window_mode, <span class="keywordtype">unsigned</span> frame_rate);</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    <span class="keyword">static</span> <a class="code" href="class_engine.html">Engine</a> * engine;</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160; </div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    uint32_t previous_time;</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    uint32_t target_time;</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    </div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    std::vector&lt; std::shared_ptr&lt;GameObject&gt; &gt; vec_game_objects;</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    <span class="keywordtype">void</span> remove_dead_game_objects();</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160; </div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    <a class="code" href="class_camera.html">Camera</a> camera;</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;};</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_engine_html"><div class="ttname"><a href="class_engine.html">Engine</a></div><div class="ttdoc">Klasa singletona silnika 3D.</div><div class="ttdef"><b>Definition:</b> Engine.hpp:75</div></div>
+<div class="ttc" id="a_engine_8hpp_html_a635428fef8d6e4afba288610c9c65bd5ac861173ef518ed9619c9f8d649bb0845"><div class="ttname"><a href="_engine_8hpp.html#a635428fef8d6e4afba288610c9c65bd5ac861173ef518ed9619c9f8d649bb0845">PROJECTION_ORTHOGRAPHIC</a></div><div class="ttdeci">@ PROJECTION_ORTHOGRAPHIC</div><div class="ttdoc">Rzutowanie równoległe.</div><div class="ttdef"><b>Definition:</b> Engine.hpp:50</div></div>
+<div class="ttc" id="aclass_engine_html_aa60c14e3ed97ad7d032f6e5088e6ffc9"><div class="ttname"><a href="class_engine.html#aa60c14e3ed97ad7d032f6e5088e6ffc9">Engine::sdl_gl_context</a></div><div class="ttdeci">SDL_GLContext sdl_gl_context</div><div class="ttdoc">Wskaźnik na kontekst OpenGL.</div><div class="ttdef"><b>Definition:</b> Engine.hpp:171</div></div>
+<div class="ttc" id="a_engine_8hpp_html_a5773202ab7ffd1746de9d527927198a3a322281fd8bd9d95fb410b43ac9d496a3"><div class="ttname"><a href="_engine_8hpp.html#a5773202ab7ffd1746de9d527927198a3a322281fd8bd9d95fb410b43ac9d496a3">FULLSCREEN_MODE</a></div><div class="ttdeci">@ FULLSCREEN_MODE</div><div class="ttdoc">Wyświetlanie pełnoekranowe.</div><div class="ttdef"><b>Definition:</b> Engine.hpp:38</div></div>
+<div class="ttc" id="aclass_engine_html_ad0106de4cd5aaf9e5f403b91d2a68203"><div class="ttname"><a href="class_engine.html#ad0106de4cd5aaf9e5f403b91d2a68203">Engine::is_running</a></div><div class="ttdeci">bool is_running</div><div class="ttdoc">Flaga wskazująca, czy silnik wciąż pracuje.</div><div class="ttdef"><b>Definition:</b> Engine.hpp:106</div></div>
+<div class="ttc" id="aclass_engine_html_a1b654dc41dfbcb5072147f33142b726e"><div class="ttname"><a href="class_engine.html#a1b654dc41dfbcb5072147f33142b726e">Engine::draw</a></div><div class="ttdeci">void draw()</div><div class="ttdoc">Metoda czyszcząca ekran i renderująca obiekty Drawable.</div><div class="ttdef"><b>Definition:</b> Engine.cpp:168</div></div>
+<div class="ttc" id="a_engine_8hpp_html_a474716bb9224d44d614704a0bd331d99a49660b029a26b6d3962b98f99d50c1c8"><div class="ttname"><a href="_engine_8hpp.html#a474716bb9224d44d614704a0bd331d99a49660b029a26b6d3962b98f99d50c1c8">SHADING_MODE_FLAT</a></div><div class="ttdeci">@ SHADING_MODE_FLAT</div><div class="ttdoc">Cieniowanie płaskie.</div><div class="ttdef"><b>Definition:</b> Engine.hpp:65</div></div>
+<div class="ttc" id="a_camera_8hpp_html"><div class="ttname"><a href="_camera_8hpp.html">Camera.hpp</a></div></div>
+<div class="ttc" id="a_engine_8hpp_html_a474716bb9224d44d614704a0bd331d99a1842e59402ce78fe0abef3a8eb6436ca"><div class="ttname"><a href="_engine_8hpp.html#a474716bb9224d44d614704a0bd331d99a1842e59402ce78fe0abef3a8eb6436ca">SHADING_MODE_SMOOTH</a></div><div class="ttdeci">@ SHADING_MODE_SMOOTH</div><div class="ttdoc">Cieniowanie gładkie.</div><div class="ttdef"><b>Definition:</b> Engine.hpp:69</div></div>
+<div class="ttc" id="aclass_engine_html_a14bb7469724b19d6c07742b86cf22918"><div class="ttname"><a href="class_engine.html#a14bb7469724b19d6c07742b86cf22918">Engine::process_events</a></div><div class="ttdeci">void process_events()</div><div class="ttdoc">Metoda obsługująca i wysyłająca zdarzenia SDL do obiektów EventListening.</div><div class="ttdef"><b>Definition:</b> Engine.cpp:127</div></div>
+<div class="ttc" id="aclass_engine_html_adac3c648ee7e39e1ab9ea745ad5c60da"><div class="ttname"><a href="class_engine.html#adac3c648ee7e39e1ab9ea745ad5c60da">Engine::add_game_object</a></div><div class="ttdeci">void add_game_object(std::shared_ptr&lt; GameObject &gt; go)</div><div class="ttdoc">Funkcja dodająca obiekt związany z grą do puli obiektów. Aby go usunąc należy ustawić jego flagę is_a...</div><div class="ttdef"><b>Definition:</b> Engine.cpp:187</div></div>
+<div class="ttc" id="aclass_engine_html_a292e2ffc09ea8a989d1ec0814b80176e"><div class="ttname"><a href="class_engine.html#a292e2ffc09ea8a989d1ec0814b80176e">Engine::get_instance</a></div><div class="ttdeci">static Engine * get_instance()</div><div class="ttdoc">Zwraca nową domyślną lub już istniejącą instancję klasy.</div><div class="ttdef"><b>Definition:</b> Engine.cpp:84</div></div>
+<div class="ttc" id="aclass_engine_html_ad2ff110d5a86c1cd60b541d65915ac48"><div class="ttname"><a href="class_engine.html#ad2ff110d5a86c1cd60b541d65915ac48">Engine::update</a></div><div class="ttdeci">void update()</div><div class="ttdoc">Metoda aktualizująca stan podsystemów silnika i obiektów Updatable.</div><div class="ttdef"><b>Definition:</b> Engine.cpp:151</div></div>
+<div class="ttc" id="aclass_engine_html_ac0ef40c4bc56b6eb11c949b4294c6dd9"><div class="ttname"><a href="class_engine.html#ac0ef40c4bc56b6eb11c949b4294c6dd9">Engine::set_shading_mode</a></div><div class="ttdeci">void set_shading_mode(ShadingMode mode)</div><div class="ttdoc">Ustawia tryb cieniowania.</div><div class="ttdef"><b>Definition:</b> Engine.cpp:252</div></div>
+<div class="ttc" id="a_engine_8hpp_html_a5773202ab7ffd1746de9d527927198a3"><div class="ttname"><a href="_engine_8hpp.html#a5773202ab7ffd1746de9d527927198a3">WindowMode</a></div><div class="ttdeci">WindowMode</div><div class="ttdoc">Enum trybu okna aplikacji.</div><div class="ttdef"><b>Definition:</b> Engine.hpp:25</div></div>
+<div class="ttc" id="a_engine_8hpp_html_a635428fef8d6e4afba288610c9c65bd5"><div class="ttname"><a href="_engine_8hpp.html#a635428fef8d6e4afba288610c9c65bd5">ProjectionMode</a></div><div class="ttdeci">ProjectionMode</div><div class="ttdoc">Enum trybu rzutowania kamery.</div><div class="ttdef"><b>Definition:</b> Engine.hpp:45</div></div>
+<div class="ttc" id="a_engine_8hpp_html_a635428fef8d6e4afba288610c9c65bd5a285bf91b4f077da1e28d8494234bf209"><div class="ttname"><a href="_engine_8hpp.html#a635428fef8d6e4afba288610c9c65bd5a285bf91b4f077da1e28d8494234bf209">PROJECTION_PERSPECTIVE</a></div><div class="ttdeci">@ PROJECTION_PERSPECTIVE</div><div class="ttdoc">Rzutowanie perspektywiczne.</div><div class="ttdef"><b>Definition:</b> Engine.hpp:54</div></div>
+<div class="ttc" id="a_game_object_8hpp_html"><div class="ttname"><a href="_game_object_8hpp.html">GameObject.hpp</a></div></div>
+<div class="ttc" id="a_engine_8hpp_html_a5773202ab7ffd1746de9d527927198a3a720ac26931ee70737a684b60042c3227"><div class="ttname"><a href="_engine_8hpp.html#a5773202ab7ffd1746de9d527927198a3a720ac26931ee70737a684b60042c3227">BORDERLESS_MODE</a></div><div class="ttdeci">@ BORDERLESS_MODE</div><div class="ttdoc">Wyświetlanie w oknie bez ramki.</div><div class="ttdef"><b>Definition:</b> Engine.hpp:34</div></div>
+<div class="ttc" id="aclass_engine_html_ad9bf048060a748dd521acf557dcffc9e"><div class="ttname"><a href="class_engine.html#ad9bf048060a748dd521acf557dcffc9e">Engine::sdl_window</a></div><div class="ttdeci">SDL_Window * sdl_window</div><div class="ttdoc">Wskaźnik na okno SDL.</div><div class="ttdef"><b>Definition:</b> Engine.hpp:167</div></div>
+<div class="ttc" id="aclass_engine_html_a8ef7030a089ecb30bbfcb9e43094717a"><div class="ttname"><a href="class_engine.html#a8ef7030a089ecb30bbfcb9e43094717a">Engine::~Engine</a></div><div class="ttdeci">~Engine()</div><div class="ttdoc">Destruktor, zwalnia wszelkie wcześniej zajęte zasoby.</div><div class="ttdef"><b>Definition:</b> Engine.cpp:74</div></div>
+<div class="ttc" id="aclass_camera_html"><div class="ttname"><a href="class_camera.html">Camera</a></div><div class="ttdoc">Klasa kamery.</div><div class="ttdef"><b>Definition:</b> Camera.hpp:16</div></div>
+<div class="ttc" id="aclass_engine_html_a5aef5077f2c3e895491fb9db6bce204d"><div class="ttname"><a href="class_engine.html#a5aef5077f2c3e895491fb9db6bce204d">Engine::schedule</a></div><div class="ttdeci">void schedule()</div><div class="ttdoc">Funkcja gospodarująca wydarzeniami związanymi z czasem w silniku.</div><div class="ttdef"><b>Definition:</b> Engine.cpp:104</div></div>
+<div class="ttc" id="a_engine_8hpp_html_a474716bb9224d44d614704a0bd331d99"><div class="ttname"><a href="_engine_8hpp.html#a474716bb9224d44d614704a0bd331d99">ShadingMode</a></div><div class="ttdeci">ShadingMode</div><div class="ttdoc">Enum trybu cieniowania.</div><div class="ttdef"><b>Definition:</b> Engine.hpp:60</div></div>
+<div class="ttc" id="a_engine_8hpp_html_a5773202ab7ffd1746de9d527927198a3ae8ecc2c5fc3095b906ed6ee57b3f8156"><div class="ttname"><a href="_engine_8hpp.html#a5773202ab7ffd1746de9d527927198a3ae8ecc2c5fc3095b906ed6ee57b3f8156">WINDOWED_MODE</a></div><div class="ttdeci">@ WINDOWED_MODE</div><div class="ttdoc">Wyświetlanie w oknie.</div><div class="ttdef"><b>Definition:</b> Engine.hpp:30</div></div>
+<div class="ttc" id="aclass_engine_html_a9368c9ca224b4162d99c7b82712d09f9"><div class="ttname"><a href="class_engine.html#a9368c9ca224b4162d99c7b82712d09f9">Engine::set_projection_mode</a></div><div class="ttdeci">void set_projection_mode(ProjectionMode mode)</div><div class="ttdoc">Ustawia tryb rzutowania.</div><div class="ttdef"><b>Definition:</b> Engine.cpp:232</div></div>
+<div class="ttc" id="aclass_engine_html_a4e2c27e724da8b1c98552618e490cf18"><div class="ttname"><a href="class_engine.html#a4e2c27e724da8b1c98552618e490cf18">Engine::get_camera</a></div><div class="ttdeci">Camera &amp; get_camera()</div><div class="ttdoc">Zwraca obiekt kamery silnika.</div><div class="ttdef"><b>Definition:</b> Engine.cpp:247</div></div>
+<div class="ttc" id="a_log_8hpp_html"><div class="ttname"><a href="_log_8hpp.html">Log.hpp</a></div></div>
+<div class="ttc" id="aclass_game_object_html"><div class="ttname"><a href="class_game_object.html">GameObject</a></div><div class="ttdoc">Podstawowa klasa obiektu gry.</div><div class="ttdef"><b>Definition:</b> GameObject.hpp:14</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano przez &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

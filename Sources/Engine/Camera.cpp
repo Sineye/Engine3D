@@ -15,7 +15,6 @@ Camera::Camera()
     position = glm::vec3(0.f);
 
     yaw = pitch = 0.f;
-    rotation_sensitivity = 1.f;
 }
 
 void Camera::set_position(glm::vec3 position) 
@@ -80,7 +79,7 @@ void Camera::update_view_matrix()
     view_matrix = glm::lookAt( position, position + heading, up );
 }
 
-glm::mat4 Camera::get_view_matrix() const
+const glm::mat4& Camera::get_view_matrix() const
 {
     return view_matrix;
 }

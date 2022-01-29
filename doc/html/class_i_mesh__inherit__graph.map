@@ -1,0 +1,7 @@
+<map id="IMesh" name="IMesh">
+<area shape="rect" id="node1" title="Interfejs dla brył geometrycznych." alt="" coords="129,5,188,32"/>
+<area shape="rect" id="node2" href="$class_cube.html" title="Klasa przechowująca dane geometryczne sześcianu." alt="" coords="91,80,144,107"/>
+<area shape="rect" id="node5" href="$class_sphere.html" title="Klasa przechowująca dane o sferze." alt="" coords="169,80,231,107"/>
+<area shape="rect" id="node3" href="$class_colored_cube.html" title="Klasa przechowująca dane kolorowego sześcianu." alt="" coords="5,155,104,181"/>
+<area shape="rect" id="node4" href="$class_textured_cube.html" title="Klasa przechowująca dane oteksturowanego sześcianu." alt="" coords="129,155,231,181"/>
+</map>

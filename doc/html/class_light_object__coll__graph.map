@@ -1,0 +1,6 @@
+<map id="LightObject" name="LightObject">
+<area shape="rect" id="node1" title="Klasa światła w przestrzeni." alt="" coords="109,155,197,181"/>
+<area shape="rect" id="node2" href="$class_transformable_object.html" title="Klasa przechowująca informacje o podstawowych danych transformacji obiektu." alt="" coords="5,80,148,107"/>
+<area shape="rect" id="node3" href="$class_game_object.html" title="Podstawowa klasa obiektu gry." alt="" coords="105,5,200,32"/>
+<area shape="rect" id="node4" href="$class_drawable_object.html" title="Interfejs dla klas, które chcą coś renderować" alt="" coords="173,80,287,107"/>
+</map>

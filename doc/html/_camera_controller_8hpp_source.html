@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Engine3D: Plik źródłowy Sources/GameObjects/CameraController.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Engine3D
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Projekt szkieletu silnika 3D z pomocą API OpenGL</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Szukaj');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_937900b87e0c7a5fa01190c395fb83f7.html">Sources</a></li><li class="navelem"><a class="el" href="dir_46a0c60835dcb1b46941f66971319fac.html">GameObjects</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">CameraController.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_camera_controller_8hpp.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_event_listening_object_8hpp.html">EventListeningObject.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_updatable_object_8hpp.html">UpdatableObject.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;glm/glm.hpp&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="class_camera_controller.html">   18</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_camera_controller.html">CameraController</a> : <span class="keyword">virtual</span> <span class="keyword">public</span> <a class="code" href="class_event_listening_object.html">EventListeningObject</a>,</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;                         <span class="keyword">virtual</span> <span class="keyword">public</span> <a class="code" href="class_updatable_object.html">UpdatableObject</a></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;{</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">bool</span> is_controller_active;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    glm::vec2 input_move; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    glm::vec2 input_rotation;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <a class="code" href="class_camera_controller.html#ad0f7e32ab3bc7ccb06f3e479b0d0681a">CameraController</a>();</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_camera_controller.html#ab40dc0520ab78b4c689ac57b9ed7407c">update</a>( uint32_t dt ) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_camera_controller.html#a31010de7cbbe84f3da3df5f1a8399a7a">handle_event</a>( <span class="keyword">const</span> SDL_Event&amp; e ) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordtype">void</span> activate( <span class="keywordtype">bool</span> b );</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;};</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_updatable_object_html"><div class="ttname"><a href="class_updatable_object.html">UpdatableObject</a></div><div class="ttdoc">Interfejs klas, których stan należy aktualizować z każdą iteracją pętli głównej gry.</div><div class="ttdef"><b>Definition:</b> UpdatableObject.hpp:18</div></div>
+<div class="ttc" id="a_updatable_object_8hpp_html"><div class="ttname"><a href="_updatable_object_8hpp.html">UpdatableObject.hpp</a></div></div>
+<div class="ttc" id="aclass_event_listening_object_html"><div class="ttname"><a href="class_event_listening_object.html">EventListeningObject</a></div><div class="ttdoc">Interfejs dla klas, które chcą obsługiwać zdarzenia z SDL2.</div><div class="ttdef"><b>Definition:</b> EventListeningObject.hpp:18</div></div>
+<div class="ttc" id="aclass_camera_controller_html_ad0f7e32ab3bc7ccb06f3e479b0d0681a"><div class="ttname"><a href="class_camera_controller.html#ad0f7e32ab3bc7ccb06f3e479b0d0681a">CameraController::CameraController</a></div><div class="ttdeci">CameraController()</div><div class="ttdoc">Konstruktor.</div><div class="ttdef"><b>Definition:</b> CameraController.cpp:9</div></div>
+<div class="ttc" id="aclass_camera_controller_html_a31010de7cbbe84f3da3df5f1a8399a7a"><div class="ttname"><a href="class_camera_controller.html#a31010de7cbbe84f3da3df5f1a8399a7a">CameraController::handle_event</a></div><div class="ttdeci">void handle_event(const SDL_Event &amp;e) override</div><div class="ttdoc">Obsługuje zdarzenia od biblioteki SDL.</div><div class="ttdef"><b>Definition:</b> CameraController.cpp:36</div></div>
+<div class="ttc" id="a_event_listening_object_8hpp_html"><div class="ttname"><a href="_event_listening_object_8hpp.html">EventListeningObject.hpp</a></div></div>
+<div class="ttc" id="aclass_camera_controller_html"><div class="ttname"><a href="class_camera_controller.html">CameraController</a></div><div class="ttdoc">Klasa kontrolera dla kamery.</div><div class="ttdef"><b>Definition:</b> CameraController.hpp:18</div></div>
+<div class="ttc" id="aclass_camera_controller_html_ab40dc0520ab78b4c689ac57b9ed7407c"><div class="ttname"><a href="class_camera_controller.html#ab40dc0520ab78b4c689ac57b9ed7407c">CameraController::update</a></div><div class="ttdeci">void update(uint32_t dt) override</div><div class="ttdoc">Aktualizuje stan kamery silnika.</div><div class="ttdef"><b>Definition:</b> CameraController.cpp:17</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano przez &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

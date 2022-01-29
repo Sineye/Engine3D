@@ -1,0 +1,6 @@
+<map id="TransformableObject" name="TransformableObject">
+<area shape="rect" id="node1" title="Klasa przechowująca informacje o podstawowych danych transformacji obiektu." alt="" coords="35,80,178,107"/>
+<area shape="rect" id="node3" href="$class_light_object.html" title="Klasa światła w przestrzeni." alt="" coords="5,155,93,181"/>
+<area shape="rect" id="node4" href="$class_mesh_object.html" title="Klasa mogąca przechowywać bryły geometryczne i je renderować" alt="" coords="118,155,210,181"/>
+<area shape="rect" id="node2" href="$class_game_object.html" title="Podstawowa klasa obiektu gry." alt="" coords="59,5,154,32"/>
+</map>

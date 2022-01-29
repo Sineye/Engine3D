@@ -1,0 +1,14 @@
+<map id="GameObject" name="GameObject">
+<area shape="rect" id="node1" title="Podstawowa klasa obiektu gry." alt="" coords="5,157,100,184"/>
+<area shape="rect" id="node2" href="$class_drawable_object.html" title="Interfejs dla klas, które chcą coś renderować" alt="" coords="163,208,278,235"/>
+<area shape="rect" id="node7" href="$class_event_listening_object.html" title="Interfejs dla klas, które chcą obsługiwać zdarzenia z SDL2." alt="" coords="148,107,293,133"/>
+<area shape="rect" id="node11" href="$class_transformable_object.html" title="Klasa przechowująca informacje o podstawowych danych transformacji obiektu." alt="" coords="149,259,292,285"/>
+<area shape="rect" id="node12" href="$class_updatable_object.html" title="Interfejs klas, których stan należy aktualizować z każdą iteracją pętli głównej gry." alt="" coords="161,56,280,83"/>
+<area shape="rect" id="node3" href="$class_first_cube_test_object.html" title="Klasa do testowania renderowania prostych sześcianów." alt="" coords="363,157,505,184"/>
+<area shape="rect" id="node4" href="$class_light_object.html" title="Klasa światła w przestrzeni." alt="" coords="390,309,478,336"/>
+<area shape="rect" id="node5" href="$class_mesh_object.html" title="Klasa mogąca przechowywać bryły geometryczne i je renderować" alt="" coords="388,259,480,285"/>
+<area shape="rect" id="node6" href="$class_simple_drawable_object.html" title="Klasa mająca wykonywać prostą operację rysowania na ekran." alt="" coords="357,208,511,235"/>
+<area shape="rect" id="node8" href="$class_camera_controller.html" title="Klasa kontrolera dla kamery." alt="" coords="373,56,495,83"/>
+<area shape="rect" id="node9" href="$class_lighting_test.html" title="Klasa do testowania oświetlenia." alt="" coords="388,5,480,32"/>
+<area shape="rect" id="node10" href="$class_simple_event_listening_object.html" title="Obiekt mający wywoływać prostą procedurę obsługi zdarzenia." alt="" coords="341,107,527,133"/>
+</map>

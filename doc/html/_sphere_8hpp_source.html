@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Engine3D: Plik źródłowy Sources/PrimitiveRendering/Sphere.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Engine3D
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Projekt szkieletu silnika 3D z pomocą API OpenGL</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Szukaj');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_937900b87e0c7a5fa01190c395fb83f7.html">Sources</a></li><li class="navelem"><a class="el" href="dir_33e0883d469fc612bc2d3af7c99a9007.html">PrimitiveRendering</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Sphere.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_sphere_8hpp.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_mesh_8hpp.html">Mesh.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;glm/glm.hpp&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="class_sphere.html">   20</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_sphere.html">Sphere</a> : <span class="keyword">public</span> <a class="code" href="class_i_mesh.html">IMesh</a></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;{</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    std::vector&lt;float&gt; vec_vertices;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    std::vector&lt;unsigned int&gt; vec_indices;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    std::vector&lt;float&gt; vec_normals;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    std::vector&lt;float&gt; vec_colors;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <a class="code" href="class_sphere.html#abbfbb4622e7a7078619563fb01de1049">Sphere</a>( <span class="keywordtype">float</span> radius, <span class="keywordtype">int</span> sector_count, <span class="keywordtype">int</span> stack_count, glm::vec3 color );</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">float</span> *<a class="code" href="class_sphere.html#ac4aaf6ca0d4a11681c69e6ec84ed4de3">get_vertices</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> *<a class="code" href="class_sphere.html#a7424b1c5b1fca0998eb4cdd3135fb29c">get_indices</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="class_sphere.html#ac55175dd4e6d74b966ac5aabe8352188">get_index_count</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">float</span> *<a class="code" href="class_sphere.html#ab4b1b53f7ea642b4c7242748ee40fcfd">get_colors</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">float</span> *<a class="code" href="class_sphere.html#a65c7d358dda4aeb483bae287d3f64134">get_normals</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;};</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_sphere_html_a7424b1c5b1fca0998eb4cdd3135fb29c"><div class="ttname"><a href="class_sphere.html#a7424b1c5b1fca0998eb4cdd3135fb29c">Sphere::get_indices</a></div><div class="ttdeci">const unsigned int * get_indices() const override</div><div class="ttdoc">Zwraca wskaźnik na indeksy wierzchołków sfery.</div><div class="ttdef"><b>Definition:</b> Sphere.cpp:81</div></div>
+<div class="ttc" id="aclass_sphere_html_ac4aaf6ca0d4a11681c69e6ec84ed4de3"><div class="ttname"><a href="class_sphere.html#ac4aaf6ca0d4a11681c69e6ec84ed4de3">Sphere::get_vertices</a></div><div class="ttdeci">const float * get_vertices() const override</div><div class="ttdoc">Zwraca wskaźnik na pozycje wierzchołków sfery.</div><div class="ttdef"><b>Definition:</b> Sphere.cpp:76</div></div>
+<div class="ttc" id="a_mesh_8hpp_html"><div class="ttname"><a href="_mesh_8hpp.html">Mesh.hpp</a></div></div>
+<div class="ttc" id="aclass_sphere_html_abbfbb4622e7a7078619563fb01de1049"><div class="ttname"><a href="class_sphere.html#abbfbb4622e7a7078619563fb01de1049">Sphere::Sphere</a></div><div class="ttdeci">Sphere(float radius, int sector_count, int stack_count, glm::vec3 color)</div><div class="ttdoc">Konstruktor.</div><div class="ttdef"><b>Definition:</b> Sphere.cpp:5</div></div>
+<div class="ttc" id="aclass_sphere_html_ab4b1b53f7ea642b4c7242748ee40fcfd"><div class="ttname"><a href="class_sphere.html#ab4b1b53f7ea642b4c7242748ee40fcfd">Sphere::get_colors</a></div><div class="ttdeci">const float * get_colors() const override</div><div class="ttdoc">Zwraca wskaźnik na kolory wierzchołków sfery.</div><div class="ttdef"><b>Definition:</b> Sphere.cpp:91</div></div>
+<div class="ttc" id="aclass_sphere_html_ac55175dd4e6d74b966ac5aabe8352188"><div class="ttname"><a href="class_sphere.html#ac55175dd4e6d74b966ac5aabe8352188">Sphere::get_index_count</a></div><div class="ttdeci">const unsigned int get_index_count() const override</div><div class="ttdoc">Zwraca ilość indeksów dla wierzchołków sfery.</div><div class="ttdef"><b>Definition:</b> Sphere.cpp:86</div></div>
+<div class="ttc" id="aclass_i_mesh_html"><div class="ttname"><a href="class_i_mesh.html">IMesh</a></div><div class="ttdoc">Interfejs dla brył geometrycznych.</div><div class="ttdef"><b>Definition:</b> Mesh.hpp:15</div></div>
+<div class="ttc" id="aclass_sphere_html_a65c7d358dda4aeb483bae287d3f64134"><div class="ttname"><a href="class_sphere.html#a65c7d358dda4aeb483bae287d3f64134">Sphere::get_normals</a></div><div class="ttdeci">const float * get_normals() const override</div><div class="ttdoc">Zwraca wskaźnik na wektory normalne sfery.</div><div class="ttdef"><b>Definition:</b> Sphere.cpp:96</div></div>
+<div class="ttc" id="aclass_sphere_html"><div class="ttname"><a href="class_sphere.html">Sphere</a></div><div class="ttdoc">Klasa przechowująca dane o sferze.</div><div class="ttdef"><b>Definition:</b> Sphere.hpp:20</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano przez &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

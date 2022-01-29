@@ -1,0 +1,8 @@
+<map id="DrawableObject" name="DrawableObject">
+<area shape="rect" id="node1" title="Interfejs dla klas, które chcą coś renderować" alt="" coords="217,80,331,107"/>
+<area shape="rect" id="node3" href="$class_first_cube_test_object.html" title="Klasa do testowania renderowania prostych sześcianów." alt="" coords="5,155,148,181"/>
+<area shape="rect" id="node4" href="$class_light_object.html" title="Klasa światła w przestrzeni." alt="" coords="173,155,261,181"/>
+<area shape="rect" id="node5" href="$class_mesh_object.html" title="Klasa mogąca przechowywać bryły geometryczne i je renderować" alt="" coords="285,155,377,181"/>
+<area shape="rect" id="node6" href="$class_simple_drawable_object.html" title="Klasa mająca wykonywać prostą operację rysowania na ekran." alt="" coords="402,155,557,181"/>
+<area shape="rect" id="node2" href="$class_game_object.html" title="Podstawowa klasa obiektu gry." alt="" coords="227,5,321,32"/>
+</map>

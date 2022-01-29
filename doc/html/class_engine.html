@@ -1,0 +1,418 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Engine3D: Dokumentacja klasy Engine</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Engine3D
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Projekt szkieletu silnika 3D z pomocą API OpenGL</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Szukaj');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Metody publiczne</a> &#124;
+<a href="#pub-static-methods">Statyczne metody publiczne</a> &#124;
+<a href="#pub-attribs">Atrybuty publiczne</a> &#124;
+<a href="class_engine-members.html">Lista wszystkich składowych</a>  </div>
+  <div class="headertitle">
+<div class="title">Dokumentacja klasy Engine</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Klasa singletona silnika 3D.  
+ <a href="class_engine.html#details">Więcej...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_engine_8hpp_source.html">Engine.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Metody publiczne</h2></td></tr>
+<tr class="memitem:a8ef7030a089ecb30bbfcb9e43094717a"><td class="memItemLeft" align="right" valign="top"><a id="a8ef7030a089ecb30bbfcb9e43094717a"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_engine.html#a8ef7030a089ecb30bbfcb9e43094717a">~Engine</a> ()</td></tr>
+<tr class="memdesc:a8ef7030a089ecb30bbfcb9e43094717a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destruktor, zwalnia wszelkie wcześniej zajęte zasoby. <br /></td></tr>
+<tr class="separator:a8ef7030a089ecb30bbfcb9e43094717a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5aef5077f2c3e895491fb9db6bce204d"><td class="memItemLeft" align="right" valign="top"><a id="a5aef5077f2c3e895491fb9db6bce204d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_engine.html#a5aef5077f2c3e895491fb9db6bce204d">schedule</a> ()</td></tr>
+<tr class="memdesc:a5aef5077f2c3e895491fb9db6bce204d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funkcja gospodarująca wydarzeniami związanymi z czasem w silniku. <br /></td></tr>
+<tr class="separator:a5aef5077f2c3e895491fb9db6bce204d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14bb7469724b19d6c07742b86cf22918"><td class="memItemLeft" align="right" valign="top"><a id="a14bb7469724b19d6c07742b86cf22918"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_engine.html#a14bb7469724b19d6c07742b86cf22918">process_events</a> ()</td></tr>
+<tr class="memdesc:a14bb7469724b19d6c07742b86cf22918"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metoda obsługująca i wysyłająca zdarzenia SDL do obiektów EventListening. <br /></td></tr>
+<tr class="separator:a14bb7469724b19d6c07742b86cf22918"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2ff110d5a86c1cd60b541d65915ac48"><td class="memItemLeft" align="right" valign="top"><a id="ad2ff110d5a86c1cd60b541d65915ac48"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_engine.html#ad2ff110d5a86c1cd60b541d65915ac48">update</a> ()</td></tr>
+<tr class="memdesc:ad2ff110d5a86c1cd60b541d65915ac48"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metoda aktualizująca stan podsystemów silnika i obiektów Updatable. <br /></td></tr>
+<tr class="separator:ad2ff110d5a86c1cd60b541d65915ac48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b654dc41dfbcb5072147f33142b726e"><td class="memItemLeft" align="right" valign="top"><a id="a1b654dc41dfbcb5072147f33142b726e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_engine.html#a1b654dc41dfbcb5072147f33142b726e">draw</a> ()</td></tr>
+<tr class="memdesc:a1b654dc41dfbcb5072147f33142b726e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metoda czyszcząca ekran i renderująca obiekty Drawable. <br /></td></tr>
+<tr class="separator:a1b654dc41dfbcb5072147f33142b726e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adac3c648ee7e39e1ab9ea745ad5c60da"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_engine.html#adac3c648ee7e39e1ab9ea745ad5c60da">add_game_object</a> (std::shared_ptr&lt; <a class="el" href="class_game_object.html">GameObject</a> &gt; go)</td></tr>
+<tr class="memdesc:adac3c648ee7e39e1ab9ea745ad5c60da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funkcja dodająca obiekt związany z grą do puli obiektów. Aby go usunąc należy ustawić jego flagę is_alive na false.  <a href="class_engine.html#adac3c648ee7e39e1ab9ea745ad5c60da">Więcej...</a><br /></td></tr>
+<tr class="separator:adac3c648ee7e39e1ab9ea745ad5c60da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7e79cfc2cdd022295fa366a1967b43f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_engine.html#ae7e79cfc2cdd022295fa366a1967b43f">add_game_object</a> (<a class="el" href="class_game_object.html">GameObject</a> *go, bool renounce_ownership=true)</td></tr>
+<tr class="memdesc:ae7e79cfc2cdd022295fa366a1967b43f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funkcja dodająca obiekt związany z grą do puli obiektów. Aby go usunąc należy ustawić jego flagę is_alive na false.  <a href="class_engine.html#ae7e79cfc2cdd022295fa366a1967b43f">Więcej...</a><br /></td></tr>
+<tr class="separator:ae7e79cfc2cdd022295fa366a1967b43f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9368c9ca224b4162d99c7b82712d09f9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_engine.html#a9368c9ca224b4162d99c7b82712d09f9">set_projection_mode</a> (<a class="el" href="_engine_8hpp.html#a635428fef8d6e4afba288610c9c65bd5">ProjectionMode</a> mode)</td></tr>
+<tr class="memdesc:a9368c9ca224b4162d99c7b82712d09f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ustawia tryb rzutowania.  <a href="class_engine.html#a9368c9ca224b4162d99c7b82712d09f9">Więcej...</a><br /></td></tr>
+<tr class="separator:a9368c9ca224b4162d99c7b82712d09f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e2c27e724da8b1c98552618e490cf18"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_camera.html">Camera</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_engine.html#a4e2c27e724da8b1c98552618e490cf18">get_camera</a> ()</td></tr>
+<tr class="memdesc:a4e2c27e724da8b1c98552618e490cf18"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zwraca obiekt kamery silnika.  <a href="class_engine.html#a4e2c27e724da8b1c98552618e490cf18">Więcej...</a><br /></td></tr>
+<tr class="separator:a4e2c27e724da8b1c98552618e490cf18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0ef40c4bc56b6eb11c949b4294c6dd9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_engine.html#ac0ef40c4bc56b6eb11c949b4294c6dd9">set_shading_mode</a> (<a class="el" href="_engine_8hpp.html#a474716bb9224d44d614704a0bd331d99">ShadingMode</a> mode)</td></tr>
+<tr class="memdesc:ac0ef40c4bc56b6eb11c949b4294c6dd9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ustawia tryb cieniowania.  <a href="class_engine.html#ac0ef40c4bc56b6eb11c949b4294c6dd9">Więcej...</a><br /></td></tr>
+<tr class="separator:ac0ef40c4bc56b6eb11c949b4294c6dd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Statyczne metody publiczne</h2></td></tr>
+<tr class="memitem:a292e2ffc09ea8a989d1ec0814b80176e"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_engine.html">Engine</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_engine.html#a292e2ffc09ea8a989d1ec0814b80176e">get_instance</a> ()</td></tr>
+<tr class="memdesc:a292e2ffc09ea8a989d1ec0814b80176e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zwraca nową domyślną lub już istniejącą instancję klasy.  <a href="class_engine.html#a292e2ffc09ea8a989d1ec0814b80176e">Więcej...</a><br /></td></tr>
+<tr class="separator:a292e2ffc09ea8a989d1ec0814b80176e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaabcbd48a9e8b951901bb0a3bced4142"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_engine.html">Engine</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_engine.html#aaabcbd48a9e8b951901bb0a3bced4142">get_instance</a> (const char *title, int x, int y, int w, int h, <a class="el" href="_engine_8hpp.html#a5773202ab7ffd1746de9d527927198a3">WindowMode</a> window_mode, unsigned frame_rate)</td></tr>
+<tr class="memdesc:aaabcbd48a9e8b951901bb0a3bced4142"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zwraca nową lub już istniejącą instancję klasy.  <a href="class_engine.html#aaabcbd48a9e8b951901bb0a3bced4142">Więcej...</a><br /></td></tr>
+<tr class="separator:aaabcbd48a9e8b951901bb0a3bced4142"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Atrybuty publiczne</h2></td></tr>
+<tr class="memitem:ad0106de4cd5aaf9e5f403b91d2a68203"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_engine.html#ad0106de4cd5aaf9e5f403b91d2a68203">is_running</a></td></tr>
+<tr class="memdesc:ad0106de4cd5aaf9e5f403b91d2a68203"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flaga wskazująca, czy silnik wciąż pracuje.  <a href="class_engine.html#ad0106de4cd5aaf9e5f403b91d2a68203">Więcej...</a><br /></td></tr>
+<tr class="separator:ad0106de4cd5aaf9e5f403b91d2a68203"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9bf048060a748dd521acf557dcffc9e"><td class="memItemLeft" align="right" valign="top"><a id="ad9bf048060a748dd521acf557dcffc9e"></a>
+SDL_Window *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_engine.html#ad9bf048060a748dd521acf557dcffc9e">sdl_window</a></td></tr>
+<tr class="memdesc:ad9bf048060a748dd521acf557dcffc9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wskaźnik na okno SDL. <br /></td></tr>
+<tr class="separator:ad9bf048060a748dd521acf557dcffc9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa60c14e3ed97ad7d032f6e5088e6ffc9"><td class="memItemLeft" align="right" valign="top"><a id="aa60c14e3ed97ad7d032f6e5088e6ffc9"></a>
+SDL_GLContext&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_engine.html#aa60c14e3ed97ad7d032f6e5088e6ffc9">sdl_gl_context</a></td></tr>
+<tr class="memdesc:aa60c14e3ed97ad7d032f6e5088e6ffc9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wskaźnik na kontekst OpenGL. <br /></td></tr>
+<tr class="separator:aa60c14e3ed97ad7d032f6e5088e6ffc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Opis szczegółowy</h2>
+<div class="textblock"><p>Klasa singletona silnika 3D. </p>
+</div><h2 class="groupheader">Dokumentacja funkcji składowych</h2>
+<a id="ae7e79cfc2cdd022295fa366a1967b43f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7e79cfc2cdd022295fa366a1967b43f">&#9670;&nbsp;</a></span>add_game_object() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Engine::add_game_object </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_game_object.html">GameObject</a> *&#160;</td>
+          <td class="paramname"><em>go</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>renounce_ownership</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Funkcja dodająca obiekt związany z grą do puli obiektów. Aby go usunąc należy ustawić jego flagę is_alive na false. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">go</td><td>dodawany obiekt </td></tr>
+    <tr><td class="paramname">renounce_ownership</td><td>jeśli ta flaga jest ustawiona na true, silnik staje sie właścicielem wskaźnika i może wykonać na nim delete. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="adac3c648ee7e39e1ab9ea745ad5c60da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adac3c648ee7e39e1ab9ea745ad5c60da">&#9670;&nbsp;</a></span>add_game_object() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Engine::add_game_object </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="class_game_object.html">GameObject</a> &gt;&#160;</td>
+          <td class="paramname"><em>go</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Funkcja dodająca obiekt związany z grą do puli obiektów. Aby go usunąc należy ustawić jego flagę is_alive na false. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">go</td><td>Dodawany obiekt. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a4e2c27e724da8b1c98552618e490cf18"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e2c27e724da8b1c98552618e490cf18">&#9670;&nbsp;</a></span>get_camera()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_camera.html">Camera</a> &amp; Engine::get_camera </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Zwraca obiekt kamery silnika. </p>
+<dl class="section return"><dt>Zwraca</dt><dd>kamera </dd></dl>
+
+</div>
+</div>
+<a id="a292e2ffc09ea8a989d1ec0814b80176e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a292e2ffc09ea8a989d1ec0814b80176e">&#9670;&nbsp;</a></span>get_instance() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_engine.html">Engine</a> * Engine::get_instance </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Zwraca nową domyślną lub już istniejącą instancję klasy. </p>
+<dl class="section return"><dt>Zwraca</dt><dd>wskaźnik na silnik </dd></dl>
+
+</div>
+</div>
+<a id="aaabcbd48a9e8b951901bb0a3bced4142"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaabcbd48a9e8b951901bb0a3bced4142">&#9670;&nbsp;</a></span>get_instance() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_engine.html">Engine</a> * Engine::get_instance </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>title</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>w</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>h</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_engine_8hpp.html#a5773202ab7ffd1746de9d527927198a3">WindowMode</a>&#160;</td>
+          <td class="paramname"><em>window_mode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>frame_rate</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Zwraca nową lub już istniejącą instancję klasy. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">title</td><td>tytuł okna </td></tr>
+    <tr><td class="paramname">x</td><td>pozycja X okna </td></tr>
+    <tr><td class="paramname">y</td><td>pozycja Y okna </td></tr>
+    <tr><td class="paramname">w</td><td>szerokość okna </td></tr>
+    <tr><td class="paramname">h</td><td>wysokość okna </td></tr>
+    <tr><td class="paramname">window_mode</td><td>tryb okna </td></tr>
+    <tr><td class="paramname">frame_rate</td><td>częstotliwość wyświetlania okna </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>wskaźnik na silnik </dd></dl>
+
+</div>
+</div>
+<a id="a9368c9ca224b4162d99c7b82712d09f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9368c9ca224b4162d99c7b82712d09f9">&#9670;&nbsp;</a></span>set_projection_mode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Engine::set_projection_mode </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_engine_8hpp.html#a635428fef8d6e4afba288610c9c65bd5">ProjectionMode</a>&#160;</td>
+          <td class="paramname"><em>mode</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ustawia tryb rzutowania. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mode</td><td>tryb rzutowania </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ac0ef40c4bc56b6eb11c949b4294c6dd9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0ef40c4bc56b6eb11c949b4294c6dd9">&#9670;&nbsp;</a></span>set_shading_mode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Engine::set_shading_mode </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_engine_8hpp.html#a474716bb9224d44d614704a0bd331d99">ShadingMode</a>&#160;</td>
+          <td class="paramname"><em>mode</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ustawia tryb cieniowania. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mode</td><td>tryb cieniowania </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentacja atrybutów składowych</h2>
+<a id="ad0106de4cd5aaf9e5f403b91d2a68203"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0106de4cd5aaf9e5f403b91d2a68203">&#9670;&nbsp;</a></span>is_running</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Engine::is_running</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Flaga wskazująca, czy silnik wciąż pracuje. </p>
+
+</div>
+</div>
+<hr/>Dokumentacja dla tej klasy została wygenerowana z plików:<ul>
+<li>Sources/Engine/<a class="el" href="_engine_8hpp_source.html">Engine.hpp</a></li>
+<li>Sources/Engine/Engine.cpp</li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano przez &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

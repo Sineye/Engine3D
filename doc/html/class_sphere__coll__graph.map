@@ -1,0 +1,4 @@
+<map id="Sphere" name="Sphere">
+<area shape="rect" id="node1" title="Klasa przechowująca dane o sferze." alt="" coords="5,80,68,107"/>
+<area shape="rect" id="node2" href="$class_i_mesh.html" title="Interfejs dla brył geometrycznych." alt="" coords="7,5,66,32"/>
+</map>

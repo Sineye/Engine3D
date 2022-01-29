@@ -1,0 +1,212 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Engine3D: Dokumentacja pliku Sources/Engine/Engine.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Engine3D
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Projekt szkieletu silnika 3D z pomocą API OpenGL</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Szukaj');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_937900b87e0c7a5fa01190c395fb83f7.html">Sources</a></li><li class="navelem"><a class="el" href="dir_994fef7c0932fcfe306300c8dd0cc8a7.html">Engine</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Komponenty</a> &#124;
+<a href="#enum-members">Wyliczenia</a>  </div>
+  <div class="headertitle">
+<div class="title">Dokumentacja pliku Engine.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;SDL.h&gt;</code><br />
+<code>#include &lt;GL/glew.h&gt;</code><br />
+<code>#include &lt;SDL_opengl.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="_log_8hpp_source.html">Utility/Log.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_game_object_8hpp_source.html">GameObjects/GameObject.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_camera_8hpp_source.html">Camera.hpp</a>&quot;</code><br />
+<code>#include &lt;memory&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Wykres zależności załączania dla Engine.hpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="_engine_8hpp__incl.png" border="0" usemap="#_sources_2_engine_2_engine_8hpp" alt=""/></div>
+<map name="_sources_2_engine_2_engine_8hpp" id="_sources_2_engine_2_engine_8hpp">
+<area shape="rect" title=" " alt="" coords="371,5,554,32"/>
+<area shape="rect" title=" " alt="" coords="5,80,64,107"/>
+<area shape="rect" title=" " alt="" coords="88,80,168,107"/>
+<area shape="rect" title=" " alt="" coords="192,80,296,107"/>
+<area shape="rect" href="_log_8hpp.html" title=" " alt="" coords="320,80,427,107"/>
+<area shape="rect" href="_game_object_8hpp.html" title=" " alt="" coords="451,80,653,107"/>
+<area shape="rect" href="_camera_8hpp.html" title=" " alt="" coords="678,80,770,107"/>
+<area shape="rect" title=" " alt="" coords="794,80,865,107"/>
+<area shape="rect" title=" " alt="" coords="889,80,946,107"/>
+<area shape="rect" title=" " alt="" coords="337,155,409,181"/>
+<area shape="rect" title=" " alt="" coords="677,155,771,181"/>
+</map>
+</div>
+</div>
+<p><a href="_engine_8hpp_source.html">Idź do kodu źródłowego tego pliku.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Komponenty</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_engine.html">Engine</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Klasa singletona silnika 3D.  <a href="class_engine.html#details">Więcej...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Wyliczenia</h2></td></tr>
+<tr class="memitem:a5773202ab7ffd1746de9d527927198a3"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_engine_8hpp.html#a5773202ab7ffd1746de9d527927198a3">WindowMode</a> { <a class="el" href="_engine_8hpp.html#a5773202ab7ffd1746de9d527927198a3ae8ecc2c5fc3095b906ed6ee57b3f8156">WINDOWED_MODE</a>, 
+<a class="el" href="_engine_8hpp.html#a5773202ab7ffd1746de9d527927198a3a720ac26931ee70737a684b60042c3227">BORDERLESS_MODE</a> = SDL_WINDOW_FULLSCREEN_DESKTOP, 
+<a class="el" href="_engine_8hpp.html#a5773202ab7ffd1746de9d527927198a3a322281fd8bd9d95fb410b43ac9d496a3">FULLSCREEN_MODE</a> = SDL_WINDOW_FULLSCREEN
+ }</td></tr>
+<tr class="memdesc:a5773202ab7ffd1746de9d527927198a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enum trybu okna aplikacji.  <a href="_engine_8hpp.html#a5773202ab7ffd1746de9d527927198a3">Więcej...</a><br /></td></tr>
+<tr class="separator:a5773202ab7ffd1746de9d527927198a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a635428fef8d6e4afba288610c9c65bd5"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_engine_8hpp.html#a635428fef8d6e4afba288610c9c65bd5">ProjectionMode</a> { <a class="el" href="_engine_8hpp.html#a635428fef8d6e4afba288610c9c65bd5ac861173ef518ed9619c9f8d649bb0845">PROJECTION_ORTHOGRAPHIC</a>, 
+<a class="el" href="_engine_8hpp.html#a635428fef8d6e4afba288610c9c65bd5a285bf91b4f077da1e28d8494234bf209">PROJECTION_PERSPECTIVE</a>
+ }</td></tr>
+<tr class="memdesc:a635428fef8d6e4afba288610c9c65bd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enum trybu rzutowania kamery.  <a href="_engine_8hpp.html#a635428fef8d6e4afba288610c9c65bd5">Więcej...</a><br /></td></tr>
+<tr class="separator:a635428fef8d6e4afba288610c9c65bd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a474716bb9224d44d614704a0bd331d99"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_engine_8hpp.html#a474716bb9224d44d614704a0bd331d99">ShadingMode</a> { <a class="el" href="_engine_8hpp.html#a474716bb9224d44d614704a0bd331d99a49660b029a26b6d3962b98f99d50c1c8">SHADING_MODE_FLAT</a> = GL_FLAT, 
+<a class="el" href="_engine_8hpp.html#a474716bb9224d44d614704a0bd331d99a1842e59402ce78fe0abef3a8eb6436ca">SHADING_MODE_SMOOTH</a> = GL_SMOOTH
+ }</td></tr>
+<tr class="memdesc:a474716bb9224d44d614704a0bd331d99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enum trybu cieniowania.  <a href="_engine_8hpp.html#a474716bb9224d44d614704a0bd331d99">Więcej...</a><br /></td></tr>
+<tr class="separator:a474716bb9224d44d614704a0bd331d99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Opis szczegółowy</h2>
+<div class="textblock"><dl class="section author"><dt>Autor</dt><dd>Przemysław Cedro, Przemysław Ciesek, Kamil Adaś </dd></dl>
+<dl class="section version"><dt>Wersja</dt><dd>1.0 </dd></dl>
+<dl class="section date"><dt>Data</dt><dd>2022-01-28 </dd></dl>
+</div><h2 class="groupheader">Dokumentacja typów wyliczanych</h2>
+<a id="a635428fef8d6e4afba288610c9c65bd5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a635428fef8d6e4afba288610c9c65bd5">&#9670;&nbsp;</a></span>ProjectionMode</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="_engine_8hpp.html#a635428fef8d6e4afba288610c9c65bd5">ProjectionMode</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enum trybu rzutowania kamery. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Wartości wyliczeń</th></tr><tr><td class="fieldname"><a id="a635428fef8d6e4afba288610c9c65bd5ac861173ef518ed9619c9f8d649bb0845"></a>PROJECTION_ORTHOGRAPHIC&#160;</td><td class="fielddoc"><p>Rzutowanie równoległe. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a635428fef8d6e4afba288610c9c65bd5a285bf91b4f077da1e28d8494234bf209"></a>PROJECTION_PERSPECTIVE&#160;</td><td class="fielddoc"><p>Rzutowanie perspektywiczne. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="a474716bb9224d44d614704a0bd331d99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a474716bb9224d44d614704a0bd331d99">&#9670;&nbsp;</a></span>ShadingMode</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="_engine_8hpp.html#a474716bb9224d44d614704a0bd331d99">ShadingMode</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enum trybu cieniowania. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Wartości wyliczeń</th></tr><tr><td class="fieldname"><a id="a474716bb9224d44d614704a0bd331d99a49660b029a26b6d3962b98f99d50c1c8"></a>SHADING_MODE_FLAT&#160;</td><td class="fielddoc"><p>Cieniowanie płaskie. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a474716bb9224d44d614704a0bd331d99a1842e59402ce78fe0abef3a8eb6436ca"></a>SHADING_MODE_SMOOTH&#160;</td><td class="fielddoc"><p>Cieniowanie gładkie. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="a5773202ab7ffd1746de9d527927198a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5773202ab7ffd1746de9d527927198a3">&#9670;&nbsp;</a></span>WindowMode</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="_engine_8hpp.html#a5773202ab7ffd1746de9d527927198a3">WindowMode</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enum trybu okna aplikacji. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Wartości wyliczeń</th></tr><tr><td class="fieldname"><a id="a5773202ab7ffd1746de9d527927198a3ae8ecc2c5fc3095b906ed6ee57b3f8156"></a>WINDOWED_MODE&#160;</td><td class="fielddoc"><p>Wyświetlanie w oknie. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a5773202ab7ffd1746de9d527927198a3a720ac26931ee70737a684b60042c3227"></a>BORDERLESS_MODE&#160;</td><td class="fielddoc"><p>Wyświetlanie w oknie bez ramki. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a5773202ab7ffd1746de9d527927198a3a322281fd8bd9d95fb410b43ac9d496a3"></a>FULLSCREEN_MODE&#160;</td><td class="fielddoc"><p>Wyświetlanie pełnoekranowe. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano przez &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

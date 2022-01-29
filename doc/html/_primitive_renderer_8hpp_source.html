@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Engine3D: Plik źródłowy Sources/PrimitiveRendering/PrimitiveRenderer.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Engine3D
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Projekt szkieletu silnika 3D z pomocą API OpenGL</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Szukaj');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_937900b87e0c7a5fa01190c395fb83f7.html">Sources</a></li><li class="navelem"><a class="el" href="dir_33e0883d469fc612bc2d3af7c99a9007.html">PrimitiveRendering</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">PrimitiveRenderer.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_primitive_renderer_8hpp.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;../Utility/ColoredVertex.hpp&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_primitive_renderer.html">   17</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_primitive_renderer.html">PrimitiveRenderer</a></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;{</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_primitive_renderer.html#aa67d91c15a8a66fb2f105242cdf8b8f5">draw_points</a>( <span class="keyword">const</span> std::vector&lt;glm::vec3&gt;&amp; points, glm::vec3 color, <span class="keywordtype">float</span> point_size = 1 );</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_primitive_renderer.html#aa67d91c15a8a66fb2f105242cdf8b8f5">draw_points</a>( <span class="keyword">const</span> std::vector&lt;ColoredVertex&gt;&amp; vertices, <span class="keywordtype">float</span> point_size = 1 );</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_primitive_renderer.html#adc916d67d4f55d863050c3048baed20c">draw_lines</a>( <span class="keyword">const</span> std::vector&lt;glm::vec3&gt;&amp; lines, glm::vec3 color, <span class="keywordtype">float</span> line_width = 1 );</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_primitive_renderer.html#adc916d67d4f55d863050c3048baed20c">draw_lines</a>( <span class="keyword">const</span> std::vector&lt;ColoredVertex&gt;&amp; lines, <span class="keywordtype">float</span> line_width = 1 );</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_primitive_renderer.html#a2158250bb5ec2448779df42c330986f6">draw_multiline</a>( <span class="keyword">const</span> std::vector&lt;glm::vec3&gt;&amp; points, glm::vec3 color, <span class="keywordtype">float</span> line_width = 1 );</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_primitive_renderer.html#a2158250bb5ec2448779df42c330986f6">draw_multiline</a>( <span class="keyword">const</span> std::vector&lt;ColoredVertex&gt;&amp; points, <span class="keywordtype">float</span> line_width = 1 );</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_primitive_renderer.html#aa162e19f9cd0958311dbb6f8a6d3a43c">draw_triangle</a>( glm::vec3 p1, glm::vec3 p2, glm::vec3 p3, glm::vec3 color );</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_primitive_renderer.html#aa162e19f9cd0958311dbb6f8a6d3a43c">draw_triangle</a>( <a class="code" href="struct_colored_vertex.html">ColoredVertex</a> p1, <a class="code" href="struct_colored_vertex.html">ColoredVertex</a> p2, <a class="code" href="struct_colored_vertex.html">ColoredVertex</a> p3 );</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_primitive_renderer.html#ade8d8b4a2858a2ae6cdcba427b2b3125">draw_triangle_fan</a>( <span class="keyword">const</span> std::vector&lt;glm::vec3&gt;&amp; fan_vertices, glm::vec3 color );</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_primitive_renderer.html#ad27371f5e95772ab7640d49cc8672975">draw_quad</a>( glm::vec3 p1, glm::vec3 p2, glm::vec3 p3, glm::vec3 p4, glm::vec3 color );</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_primitive_renderer.html#ad27371f5e95772ab7640d49cc8672975">draw_quad</a>( <a class="code" href="struct_colored_vertex.html">ColoredVertex</a> p1, <a class="code" href="struct_colored_vertex.html">ColoredVertex</a> p2, <a class="code" href="struct_colored_vertex.html">ColoredVertex</a> p3, <a class="code" href="struct_colored_vertex.html">ColoredVertex</a> p4 );</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;};</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_primitive_renderer_html_aa67d91c15a8a66fb2f105242cdf8b8f5"><div class="ttname"><a href="class_primitive_renderer.html#aa67d91c15a8a66fb2f105242cdf8b8f5">PrimitiveRenderer::draw_points</a></div><div class="ttdeci">static void draw_points(const std::vector&lt; glm::vec3 &gt; &amp;points, glm::vec3 color, float point_size=1)</div><div class="ttdoc">Rysuje punkty na ekranie.</div><div class="ttdef"><b>Definition:</b> PrimitiveRenderer.cpp:5</div></div>
+<div class="ttc" id="aclass_primitive_renderer_html_aa162e19f9cd0958311dbb6f8a6d3a43c"><div class="ttname"><a href="class_primitive_renderer.html#aa162e19f9cd0958311dbb6f8a6d3a43c">PrimitiveRenderer::draw_triangle</a></div><div class="ttdeci">static void draw_triangle(glm::vec3 p1, glm::vec3 p2, glm::vec3 p3, glm::vec3 color)</div><div class="ttdoc">Rysuje trójkąt.</div><div class="ttdef"><b>Definition:</b> PrimitiveRenderer.cpp:74</div></div>
+<div class="ttc" id="aclass_primitive_renderer_html_ad27371f5e95772ab7640d49cc8672975"><div class="ttname"><a href="class_primitive_renderer.html#ad27371f5e95772ab7640d49cc8672975">PrimitiveRenderer::draw_quad</a></div><div class="ttdeci">static void draw_quad(glm::vec3 p1, glm::vec3 p2, glm::vec3 p3, glm::vec3 p4, glm::vec3 color)</div><div class="ttdoc">Rysuje czworokąt.</div><div class="ttdef"><b>Definition:</b> PrimitiveRenderer.cpp:109</div></div>
+<div class="ttc" id="aclass_primitive_renderer_html_adc916d67d4f55d863050c3048baed20c"><div class="ttname"><a href="class_primitive_renderer.html#adc916d67d4f55d863050c3048baed20c">PrimitiveRenderer::draw_lines</a></div><div class="ttdeci">static void draw_lines(const std::vector&lt; glm::vec3 &gt; &amp;lines, glm::vec3 color, float line_width=1)</div><div class="ttdoc">Rysuje linie na ekranie.</div><div class="ttdef"><b>Definition:</b> PrimitiveRenderer.cpp:28</div></div>
+<div class="ttc" id="aclass_primitive_renderer_html_a2158250bb5ec2448779df42c330986f6"><div class="ttname"><a href="class_primitive_renderer.html#a2158250bb5ec2448779df42c330986f6">PrimitiveRenderer::draw_multiline</a></div><div class="ttdeci">static void draw_multiline(const std::vector&lt; glm::vec3 &gt; &amp;points, glm::vec3 color, float line_width=1)</div><div class="ttdoc">Rysuje przerywaną linię</div><div class="ttdef"><b>Definition:</b> PrimitiveRenderer.cpp:51</div></div>
+<div class="ttc" id="aclass_primitive_renderer_html"><div class="ttname"><a href="class_primitive_renderer.html">PrimitiveRenderer</a></div><div class="ttdoc">Klasa służąca do rysowania prymitywów.</div><div class="ttdef"><b>Definition:</b> PrimitiveRenderer.hpp:17</div></div>
+<div class="ttc" id="aclass_primitive_renderer_html_ade8d8b4a2858a2ae6cdcba427b2b3125"><div class="ttname"><a href="class_primitive_renderer.html#ade8d8b4a2858a2ae6cdcba427b2b3125">PrimitiveRenderer::draw_triangle_fan</a></div><div class="ttdeci">static void draw_triangle_fan(const std::vector&lt; glm::vec3 &gt; &amp;fan_vertices, glm::vec3 color)</div><div class="ttdoc">Rysuje wachlarz trójkątów.</div><div class="ttdef"><b>Definition:</b> PrimitiveRenderer.cpp:99</div></div>
+<div class="ttc" id="astruct_colored_vertex_html"><div class="ttname"><a href="struct_colored_vertex.html">ColoredVertex</a></div><div class="ttdoc">Struktura przechowująca dane o kolorowym wierzchołku.</div><div class="ttdef"><b>Definition:</b> ColoredVertex.hpp:15</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano przez &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

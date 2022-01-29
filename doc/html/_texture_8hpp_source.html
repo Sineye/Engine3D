@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Engine3D: Plik źródłowy Sources/Texture/Texture.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Engine3D
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Projekt szkieletu silnika 3D z pomocą API OpenGL</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Szukaj');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_937900b87e0c7a5fa01190c395fb83f7.html">Sources</a></li><li class="navelem"><a class="el" href="dir_5e3bd5e9c707c484bb65f8953a3c6890.html">Texture</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Texture.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_texture_8hpp.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;GL/glew.h&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;glm/glm.hpp&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="class_texture.html">   16</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_texture.html">Texture</a></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;{</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    GLuint id;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    glm::ivec2 size;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    GLenum format;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <a class="code" href="class_texture.html#a6c275e3f186675ff6ed73ccf970e552f">Texture</a>();</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="class_texture.html#a09c4bcb7462f64c1d20fa69dba3cee8a">~Texture</a>();</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_texture.html#a29f8bd96609122615e1914492b65b3ac">load</a>( <span class="keyword">const</span> <span class="keywordtype">char</span> *path );</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    GLuint <a class="code" href="class_texture.html#a53aa350bde0fc93271c74e2bd2b391fa">get_id</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    glm::ivec2 <a class="code" href="class_texture.html#a93630bc599e89d72e89377ee9cdf8e1c">get_size</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    GLenum <a class="code" href="class_texture.html#aba9187792a5d61ead17f4701273319dc">get_format</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;};</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_texture_html_a29f8bd96609122615e1914492b65b3ac"><div class="ttname"><a href="class_texture.html#a29f8bd96609122615e1914492b65b3ac">Texture::load</a></div><div class="ttdeci">bool load(const char *path)</div><div class="ttdoc">Ładuje teksturę z pliku.</div><div class="ttdef"><b>Definition:</b> Texture.cpp:20</div></div>
+<div class="ttc" id="aclass_texture_html"><div class="ttname"><a href="class_texture.html">Texture</a></div><div class="ttdoc">Klasa reprezentująca teksturę</div><div class="ttdef"><b>Definition:</b> Texture.hpp:16</div></div>
+<div class="ttc" id="aclass_texture_html_a6c275e3f186675ff6ed73ccf970e552f"><div class="ttname"><a href="class_texture.html#a6c275e3f186675ff6ed73ccf970e552f">Texture::Texture</a></div><div class="ttdeci">Texture()</div><div class="ttdoc">Konstruktor.</div><div class="ttdef"><b>Definition:</b> Texture.cpp:5</div></div>
+<div class="ttc" id="aclass_texture_html_a09c4bcb7462f64c1d20fa69dba3cee8a"><div class="ttname"><a href="class_texture.html#a09c4bcb7462f64c1d20fa69dba3cee8a">Texture::~Texture</a></div><div class="ttdeci">~Texture()</div><div class="ttdoc">Destruktor.</div><div class="ttdef"><b>Definition:</b> Texture.cpp:12</div></div>
+<div class="ttc" id="aclass_texture_html_a53aa350bde0fc93271c74e2bd2b391fa"><div class="ttname"><a href="class_texture.html#a53aa350bde0fc93271c74e2bd2b391fa">Texture::get_id</a></div><div class="ttdeci">GLuint get_id() const</div><div class="ttdoc">Zwraca identyfikator OpenGL tekstury.</div><div class="ttdef"><b>Definition:</b> Texture.cpp:62</div></div>
+<div class="ttc" id="aclass_texture_html_a93630bc599e89d72e89377ee9cdf8e1c"><div class="ttname"><a href="class_texture.html#a93630bc599e89d72e89377ee9cdf8e1c">Texture::get_size</a></div><div class="ttdeci">glm::ivec2 get_size() const</div><div class="ttdoc">Zwraca wielkość tekstury.</div><div class="ttdef"><b>Definition:</b> Texture.cpp:67</div></div>
+<div class="ttc" id="aclass_texture_html_aba9187792a5d61ead17f4701273319dc"><div class="ttname"><a href="class_texture.html#aba9187792a5d61ead17f4701273319dc">Texture::get_format</a></div><div class="ttdeci">GLenum get_format() const</div><div class="ttdoc">Zwraca format w jakim została załadowana tekstura (RGB, RGBA itd.)</div><div class="ttdef"><b>Definition:</b> Texture.cpp:72</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano przez &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

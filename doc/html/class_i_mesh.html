@@ -1,0 +1,340 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Engine3D: Dokumentacja klasy IMesh</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Engine3D
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Projekt szkieletu silnika 3D z pomocą API OpenGL</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Szukaj');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Metody publiczne</a> &#124;
+<a href="class_i_mesh-members.html">Lista wszystkich składowych</a>  </div>
+  <div class="headertitle">
+<div class="title">Dokumentacja klasy IMesh<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Interfejs dla brył geometrycznych.  
+ <a href="class_i_mesh.html#details">Więcej...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_mesh_8hpp_source.html">Mesh.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Diagram dziedziczenia dla IMesh</div>
+<div class="dyncontent">
+<div class="center"><img src="class_i_mesh__inherit__graph.png" border="0" usemap="#_i_mesh_inherit__map" alt="Inheritance graph"/></div>
+<map name="_i_mesh_inherit__map" id="_i_mesh_inherit__map">
+<area shape="rect" title="Interfejs dla brył geometrycznych." alt="" coords="129,5,188,32"/>
+<area shape="rect" href="class_cube.html" title="Klasa przechowująca dane geometryczne sześcianu." alt="" coords="91,80,144,107"/>
+<area shape="rect" href="class_sphere.html" title="Klasa przechowująca dane o sferze." alt="" coords="169,80,231,107"/>
+<area shape="rect" href="class_colored_cube.html" title="Klasa przechowująca dane kolorowego sześcianu." alt="" coords="5,155,104,181"/>
+<area shape="rect" href="class_textured_cube.html" title="Klasa przechowująca dane oteksturowanego sześcianu." alt="" coords="129,155,231,181"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">legenda</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Metody publiczne</h2></td></tr>
+<tr class="memitem:a497d3f695140f07dac5ea626ec4a010a"><td class="memItemLeft" align="right" valign="top">virtual const float *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_mesh.html#a497d3f695140f07dac5ea626ec4a010a">get_vertices</a> () const =0</td></tr>
+<tr class="memdesc:a497d3f695140f07dac5ea626ec4a010a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zwraca wskaźnik na pozycje wierzchołków bryły.  <a href="class_i_mesh.html#a497d3f695140f07dac5ea626ec4a010a">Więcej...</a><br /></td></tr>
+<tr class="separator:a497d3f695140f07dac5ea626ec4a010a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a032107fed2f5b091da4058064d5520a1"><td class="memItemLeft" align="right" valign="top">virtual const unsigned int *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_mesh.html#a032107fed2f5b091da4058064d5520a1">get_indices</a> () const =0</td></tr>
+<tr class="memdesc:a032107fed2f5b091da4058064d5520a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zwraca wskaźnik na indeksy wierzchołków bryły.  <a href="class_i_mesh.html#a032107fed2f5b091da4058064d5520a1">Więcej...</a><br /></td></tr>
+<tr class="separator:a032107fed2f5b091da4058064d5520a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a7e665a5174653ff3e38da9bea2136e"><td class="memItemLeft" align="right" valign="top">virtual const unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_mesh.html#a8a7e665a5174653ff3e38da9bea2136e">get_index_count</a> () const =0</td></tr>
+<tr class="memdesc:a8a7e665a5174653ff3e38da9bea2136e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zwraca ilość indeksów dla wierzchołków bryły.  <a href="class_i_mesh.html#a8a7e665a5174653ff3e38da9bea2136e">Więcej...</a><br /></td></tr>
+<tr class="separator:a8a7e665a5174653ff3e38da9bea2136e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad277cf8b1bb17b31c82120fc3be5951e"><td class="memItemLeft" align="right" valign="top">virtual const float *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_mesh.html#ad277cf8b1bb17b31c82120fc3be5951e">get_colors</a> () const</td></tr>
+<tr class="memdesc:ad277cf8b1bb17b31c82120fc3be5951e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zwraca wskaźnik na kolory wierzchołków bryły.  <a href="class_i_mesh.html#ad277cf8b1bb17b31c82120fc3be5951e">Więcej...</a><br /></td></tr>
+<tr class="separator:ad277cf8b1bb17b31c82120fc3be5951e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abebc98f4eac499d4df10335c6ebd3d54"><td class="memItemLeft" align="right" valign="top">virtual const float *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_mesh.html#abebc98f4eac499d4df10335c6ebd3d54">get_normals</a> () const</td></tr>
+<tr class="memdesc:abebc98f4eac499d4df10335c6ebd3d54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zwraca wskaźnik na wektory normalne bryły.  <a href="class_i_mesh.html#abebc98f4eac499d4df10335c6ebd3d54">Więcej...</a><br /></td></tr>
+<tr class="separator:abebc98f4eac499d4df10335c6ebd3d54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aafa49093f8b5ee7d9a4d30f7209e8437"><td class="memItemLeft" align="right" valign="top">virtual const GLuint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_mesh.html#aafa49093f8b5ee7d9a4d30f7209e8437">get_texture_id</a> () const</td></tr>
+<tr class="memdesc:aafa49093f8b5ee7d9a4d30f7209e8437"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zwraca ID tekstury przypisanej do bryły.  <a href="class_i_mesh.html#aafa49093f8b5ee7d9a4d30f7209e8437">Więcej...</a><br /></td></tr>
+<tr class="separator:aafa49093f8b5ee7d9a4d30f7209e8437"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad81442061d9fe864e1cba65ec5f9477e"><td class="memItemLeft" align="right" valign="top">virtual const float *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_mesh.html#ad81442061d9fe864e1cba65ec5f9477e">get_tex_coords</a> () const</td></tr>
+<tr class="memdesc:ad81442061d9fe864e1cba65ec5f9477e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zwraca wskaźnik na koordynaty teksturowe dla wierzchołków bryły.  <a href="class_i_mesh.html#ad81442061d9fe864e1cba65ec5f9477e">Więcej...</a><br /></td></tr>
+<tr class="separator:ad81442061d9fe864e1cba65ec5f9477e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Opis szczegółowy</h2>
+<div class="textblock"><p>Interfejs dla brył geometrycznych. </p>
+</div><h2 class="groupheader">Dokumentacja funkcji składowych</h2>
+<a id="ad277cf8b1bb17b31c82120fc3be5951e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad277cf8b1bb17b31c82120fc3be5951e">&#9670;&nbsp;</a></span>get_colors()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const float * IMesh::get_colors </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Zwraca wskaźnik na kolory wierzchołków bryły. </p>
+<dl class="section return"><dt>Zwraca</dt><dd>wskaźnik na kolory wierzchołków bryły </dd></dl>
+
+<p>Reimplementowana w <a class="el" href="class_sphere.html#ab4b1b53f7ea642b4c7242748ee40fcfd">Sphere</a> i <a class="el" href="class_colored_cube.html#a6d381f3427987acb99aa03a8d4465de6">ColoredCube</a>.</p>
+
+</div>
+</div>
+<a id="a8a7e665a5174653ff3e38da9bea2136e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a7e665a5174653ff3e38da9bea2136e">&#9670;&nbsp;</a></span>get_index_count()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual const unsigned int IMesh::get_index_count </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Zwraca ilość indeksów dla wierzchołków bryły. </p>
+<dl class="section return"><dt>Zwraca</dt><dd>ilość indeksów dla wierzchołków bryły </dd></dl>
+
+<p>Implementowany w <a class="el" href="class_sphere.html#ac55175dd4e6d74b966ac5aabe8352188">Sphere</a> i <a class="el" href="class_cube.html#ae8ad8955454a8a372efad01dcd9a2c7f">Cube</a>.</p>
+
+</div>
+</div>
+<a id="a032107fed2f5b091da4058064d5520a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a032107fed2f5b091da4058064d5520a1">&#9670;&nbsp;</a></span>get_indices()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual const unsigned int* IMesh::get_indices </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Zwraca wskaźnik na indeksy wierzchołków bryły. </p>
+<dl class="section return"><dt>Zwraca</dt><dd>wskaźnik na indeksy wierzchołków bryły </dd></dl>
+
+<p>Implementowany w <a class="el" href="class_sphere.html#a7424b1c5b1fca0998eb4cdd3135fb29c">Sphere</a> i <a class="el" href="class_cube.html#acd1e277ea02b5ac46227876681f3cea4">Cube</a>.</p>
+
+</div>
+</div>
+<a id="abebc98f4eac499d4df10335c6ebd3d54"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abebc98f4eac499d4df10335c6ebd3d54">&#9670;&nbsp;</a></span>get_normals()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const float * IMesh::get_normals </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Zwraca wskaźnik na wektory normalne bryły. </p>
+<dl class="section return"><dt>Zwraca</dt><dd>wskaźnik na wektory normalne bryły </dd></dl>
+
+<p>Reimplementowana w <a class="el" href="class_sphere.html#a65c7d358dda4aeb483bae287d3f64134">Sphere</a> i <a class="el" href="class_cube.html#aa227d9d0815af648f06ac3ac040764a8">Cube</a>.</p>
+
+</div>
+</div>
+<a id="ad81442061d9fe864e1cba65ec5f9477e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad81442061d9fe864e1cba65ec5f9477e">&#9670;&nbsp;</a></span>get_tex_coords()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const float * IMesh::get_tex_coords </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Zwraca wskaźnik na koordynaty teksturowe dla wierzchołków bryły. </p>
+<dl class="section return"><dt>Zwraca</dt><dd>wskaźnik na koordynaty teksturowe dla wierzchołków bryły </dd></dl>
+
+<p>Reimplementowana w <a class="el" href="class_textured_cube.html#af62b72747f1671f0c50e74fab16831c1">TexturedCube</a>.</p>
+
+</div>
+</div>
+<a id="aafa49093f8b5ee7d9a4d30f7209e8437"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aafa49093f8b5ee7d9a4d30f7209e8437">&#9670;&nbsp;</a></span>get_texture_id()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const GLuint IMesh::get_texture_id </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Zwraca ID tekstury przypisanej do bryły. </p>
+<dl class="section return"><dt>Zwraca</dt><dd>ID tekstury przypisanej do bryły </dd></dl>
+
+<p>Reimplementowana w <a class="el" href="class_textured_cube.html#ac0b2d6a0facc55179328038b501a46eb">TexturedCube</a>.</p>
+
+</div>
+</div>
+<a id="a497d3f695140f07dac5ea626ec4a010a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a497d3f695140f07dac5ea626ec4a010a">&#9670;&nbsp;</a></span>get_vertices()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual const float* IMesh::get_vertices </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Zwraca wskaźnik na pozycje wierzchołków bryły. </p>
+<dl class="section return"><dt>Zwraca</dt><dd>wskaźnik na pozycje wierzchołków bryły </dd></dl>
+
+<p>Implementowany w <a class="el" href="class_sphere.html#ac4aaf6ca0d4a11681c69e6ec84ed4de3">Sphere</a> i <a class="el" href="class_cube.html#a09165abe3bbffa86435d518d75568f13">Cube</a>.</p>
+
+</div>
+</div>
+<hr/>Dokumentacja dla tej klasy została wygenerowana z plików:<ul>
+<li>Sources/PrimitiveRendering/<a class="el" href="_mesh_8hpp_source.html">Mesh.hpp</a></li>
+<li>Sources/PrimitiveRendering/Mesh.cpp</li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano przez &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

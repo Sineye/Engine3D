@@ -1,0 +1,140 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Engine3D: Plik źródłowy Sources/Engine/Camera.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Engine3D
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Projekt szkieletu silnika 3D z pomocą API OpenGL</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Szukaj');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_937900b87e0c7a5fa01190c395fb83f7.html">Sources</a></li><li class="navelem"><a class="el" href="dir_994fef7c0932fcfe306300c8dd0cc8a7.html">Engine</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Camera.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_camera_8hpp.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;glm/glm.hpp&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="class_camera.html">   16</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_camera.html">Camera</a></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;{</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    glm::mat4 proj_matrix;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    glm::mat4 view_matrix;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    glm::vec3 position;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordtype">float</span> yaw;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">float</span> pitch;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    glm::vec3 heading;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    glm::vec3 up;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    glm::vec3 right;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keyword">const</span> glm::vec3 WORLD_UP { 0.f, 1.f, 0.f };</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <a class="code" href="class_camera.html#a01f94c3543f56ede7af49dc778f19331">Camera</a>();</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_camera.html#a333bc3fb98eb2238c3eaf4a95ab82f23">set_position</a>( glm::vec3 position );</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    glm::vec3 <a class="code" href="class_camera.html#adbf1d9c6340b703fc328f55b2d8cae2d">get_position</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_camera.html#a10fe2fc3511523dd0a91497da84b2098">set_yaw</a>( <span class="keywordtype">float</span> yaw );</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keywordtype">float</span> <a class="code" href="class_camera.html#a7370be1848eda45cc45579fb50b0f13c">get_yaw</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_camera.html#ab7f17645d0e8ac4feabc0bfd6a1b94cf">set_pitch</a>( <span class="keywordtype">float</span> pitch );</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keywordtype">float</span> <a class="code" href="class_camera.html#af9312168d8e620d037c947b6353ee536">get_pitch</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    glm::vec3 <a class="code" href="class_camera.html#a97a8b5996278fd7bfff2943d48372a48">get_heading</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    glm::vec3 <a class="code" href="class_camera.html#a2fe6ef0fa9814633c169722e8d30ecce">get_up</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    glm::vec3 <a class="code" href="class_camera.html#a353513a3d50910af55b1f7bd3dd646e9">get_right</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_camera.html#aa8314e7d472a74170c6e5c249da1ef2a">update_view_matrix</a>();</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <span class="keyword">const</span> glm::mat4&amp; <a class="code" href="class_camera.html#afc22263163bc85315b24d94f0208b713">get_view_matrix</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160; </div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_camera.html#a9b33b0cee3a8a29a7e0764f188173de7">set_projection_matrix</a>( <span class="keyword">const</span> glm::mat4&amp; mat );</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    <span class="keyword">const</span> glm::mat4&amp; <a class="code" href="class_camera.html#aa5a0d321094c6fdddc9ff2f57e5b0047">get_projection_matrix</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;};</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_camera_html_a353513a3d50910af55b1f7bd3dd646e9"><div class="ttname"><a href="class_camera.html#a353513a3d50910af55b1f7bd3dd646e9">Camera::get_right</a></div><div class="ttdeci">glm::vec3 get_right() const</div><div class="ttdoc">Zwraca wektor idący w prawo względem kamery.</div><div class="ttdef"><b>Definition:</b> Camera.cpp:60</div></div>
+<div class="ttc" id="aclass_camera_html_a9b33b0cee3a8a29a7e0764f188173de7"><div class="ttname"><a href="class_camera.html#a9b33b0cee3a8a29a7e0764f188173de7">Camera::set_projection_matrix</a></div><div class="ttdeci">void set_projection_matrix(const glm::mat4 &amp;mat)</div><div class="ttdoc">Ustawia macierz projekcji kamery.</div><div class="ttdef"><b>Definition:</b> Camera.cpp:87</div></div>
+<div class="ttc" id="aclass_camera_html_afc22263163bc85315b24d94f0208b713"><div class="ttname"><a href="class_camera.html#afc22263163bc85315b24d94f0208b713">Camera::get_view_matrix</a></div><div class="ttdeci">const glm::mat4 &amp; get_view_matrix() const</div><div class="ttdoc">Get the view matrix object.</div><div class="ttdef"><b>Definition:</b> Camera.cpp:82</div></div>
+<div class="ttc" id="aclass_camera_html_a01f94c3543f56ede7af49dc778f19331"><div class="ttname"><a href="class_camera.html#a01f94c3543f56ede7af49dc778f19331">Camera::Camera</a></div><div class="ttdeci">Camera()</div><div class="ttdoc">Konstruktor.</div><div class="ttdef"><b>Definition:</b> Camera.cpp:10</div></div>
+<div class="ttc" id="aclass_camera_html_adbf1d9c6340b703fc328f55b2d8cae2d"><div class="ttname"><a href="class_camera.html#adbf1d9c6340b703fc328f55b2d8cae2d">Camera::get_position</a></div><div class="ttdeci">glm::vec3 get_position() const</div><div class="ttdoc">Zwraca pozycję kamery w przestrzeni.</div><div class="ttdef"><b>Definition:</b> Camera.cpp:25</div></div>
+<div class="ttc" id="aclass_camera_html_a7370be1848eda45cc45579fb50b0f13c"><div class="ttname"><a href="class_camera.html#a7370be1848eda45cc45579fb50b0f13c">Camera::get_yaw</a></div><div class="ttdeci">float get_yaw() const</div><div class="ttdoc">Zwraca obrót kamery w poziomie.</div><div class="ttdef"><b>Definition:</b> Camera.cpp:35</div></div>
+<div class="ttc" id="aclass_camera_html_a2fe6ef0fa9814633c169722e8d30ecce"><div class="ttname"><a href="class_camera.html#a2fe6ef0fa9814633c169722e8d30ecce">Camera::get_up</a></div><div class="ttdeci">glm::vec3 get_up() const</div><div class="ttdoc">Zwraca wektor idący w górę względem kamery.</div><div class="ttdef"><b>Definition:</b> Camera.cpp:55</div></div>
+<div class="ttc" id="aclass_camera_html_ab7f17645d0e8ac4feabc0bfd6a1b94cf"><div class="ttname"><a href="class_camera.html#ab7f17645d0e8ac4feabc0bfd6a1b94cf">Camera::set_pitch</a></div><div class="ttdeci">void set_pitch(float pitch)</div><div class="ttdoc">Ustawia obrót pionowy kamery.</div><div class="ttdef"><b>Definition:</b> Camera.cpp:40</div></div>
+<div class="ttc" id="aclass_camera_html_aa8314e7d472a74170c6e5c249da1ef2a"><div class="ttname"><a href="class_camera.html#aa8314e7d472a74170c6e5c249da1ef2a">Camera::update_view_matrix</a></div><div class="ttdeci">void update_view_matrix()</div><div class="ttdoc">Aktualizuje macierz widoku kamery na podstawie ustawionych wcześniej pozycji i obrotów.</div><div class="ttdef"><b>Definition:</b> Camera.cpp:65</div></div>
+<div class="ttc" id="aclass_camera_html"><div class="ttname"><a href="class_camera.html">Camera</a></div><div class="ttdoc">Klasa kamery.</div><div class="ttdef"><b>Definition:</b> Camera.hpp:16</div></div>
+<div class="ttc" id="aclass_camera_html_a333bc3fb98eb2238c3eaf4a95ab82f23"><div class="ttname"><a href="class_camera.html#a333bc3fb98eb2238c3eaf4a95ab82f23">Camera::set_position</a></div><div class="ttdeci">void set_position(glm::vec3 position)</div><div class="ttdoc">Ustawia pozycję kamery w przestrzeni.</div><div class="ttdef"><b>Definition:</b> Camera.cpp:20</div></div>
+<div class="ttc" id="aclass_camera_html_aa5a0d321094c6fdddc9ff2f57e5b0047"><div class="ttname"><a href="class_camera.html#aa5a0d321094c6fdddc9ff2f57e5b0047">Camera::get_projection_matrix</a></div><div class="ttdeci">const glm::mat4 &amp; get_projection_matrix() const</div><div class="ttdoc">Zwraca macierz projekcji kamery.</div><div class="ttdef"><b>Definition:</b> Camera.cpp:95</div></div>
+<div class="ttc" id="aclass_camera_html_af9312168d8e620d037c947b6353ee536"><div class="ttname"><a href="class_camera.html#af9312168d8e620d037c947b6353ee536">Camera::get_pitch</a></div><div class="ttdeci">float get_pitch() const</div><div class="ttdoc">Zwraca obrót kamery w pionie.</div><div class="ttdef"><b>Definition:</b> Camera.cpp:45</div></div>
+<div class="ttc" id="aclass_camera_html_a97a8b5996278fd7bfff2943d48372a48"><div class="ttname"><a href="class_camera.html#a97a8b5996278fd7bfff2943d48372a48">Camera::get_heading</a></div><div class="ttdeci">glm::vec3 get_heading() const</div><div class="ttdoc">Zwraca kierunek, w którym skierowana jest kamera.</div><div class="ttdef"><b>Definition:</b> Camera.cpp:50</div></div>
+<div class="ttc" id="aclass_camera_html_a10fe2fc3511523dd0a91497da84b2098"><div class="ttname"><a href="class_camera.html#a10fe2fc3511523dd0a91497da84b2098">Camera::set_yaw</a></div><div class="ttdeci">void set_yaw(float yaw)</div><div class="ttdoc">Ustawia obrót poziomy kamery.</div><div class="ttdef"><b>Definition:</b> Camera.cpp:30</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano przez &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

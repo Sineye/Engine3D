@@ -1,0 +1,8 @@
+<map id="EventListeningObject" name="EventListeningObject">
+<area shape="rect" id="node1" title="Interfejs dla klas, które chcą obsługiwać zdarzenia z SDL2." alt="" coords="222,80,367,107"/>
+<area shape="rect" id="node3" href="$class_camera_controller.html" title="Klasa kontrolera dla kamery." alt="" coords="5,155,128,181"/>
+<area shape="rect" id="node4" href="$class_first_cube_test_object.html" title="Klasa do testowania renderowania prostych sześcianów." alt="" coords="153,155,295,181"/>
+<area shape="rect" id="node5" href="$class_lighting_test.html" title="Klasa do testowania oświetlenia." alt="" coords="319,155,411,181"/>
+<area shape="rect" id="node6" href="$class_simple_event_listening_object.html" title="Obiekt mający wywoływać prostą procedurę obsługi zdarzenia." alt="" coords="435,155,621,181"/>
+<area shape="rect" id="node2" href="$class_game_object.html" title="Podstawowa klasa obiektu gry." alt="" coords="247,5,342,32"/>
+</map>

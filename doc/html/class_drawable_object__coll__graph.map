@@ -1,0 +1,4 @@
+<map id="DrawableObject" name="DrawableObject">
+<area shape="rect" id="node1" title="Interfejs dla klas, które chcą coś renderować" alt="" coords="5,80,120,107"/>
+<area shape="rect" id="node2" href="$class_game_object.html" title="Podstawowa klasa obiektu gry." alt="" coords="15,5,110,32"/>
+</map>

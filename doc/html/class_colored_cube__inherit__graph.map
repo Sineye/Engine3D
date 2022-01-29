@@ -1,0 +1,5 @@
+<map id="ColoredCube" name="ColoredCube">
+<area shape="rect" id="node1" title="Klasa przechowująca dane kolorowego sześcianu." alt="" coords="5,155,104,181"/>
+<area shape="rect" id="node2" href="$class_cube.html" title="Klasa przechowująca dane geometryczne sześcianu." alt="" coords="28,80,81,107"/>
+<area shape="rect" id="node3" href="$class_i_mesh.html" title="Interfejs dla brył geometrycznych." alt="" coords="25,5,84,32"/>
+</map>

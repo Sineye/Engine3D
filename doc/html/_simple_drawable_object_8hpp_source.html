@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Engine3D: Plik źródłowy Sources/GameObjects/SimpleDrawableObject.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Engine3D
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Projekt szkieletu silnika 3D z pomocą API OpenGL</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Szukaj');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_937900b87e0c7a5fa01190c395fb83f7.html">Sources</a></li><li class="navelem"><a class="el" href="dir_46a0c60835dcb1b46941f66971319fac.html">GameObjects</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">SimpleDrawableObject.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_simple_drawable_object_8hpp.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_drawable_object_8hpp.html">DrawableObject.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;functional&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_simple_drawable_object.html">   17</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_simple_drawable_object.html">SimpleDrawableObject</a> : <span class="keyword">public</span> <a class="code" href="class_drawable_object.html">DrawableObject</a></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;{</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    std::function&lt; void() &gt; draw_func;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="class_simple_drawable_object.html#aa4293aa47c0ad8e50f537dec6d974735">SimpleDrawableObject</a>( std::function&lt; <span class="keywordtype">void</span>() &gt; draw_func );</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_simple_drawable_object.html#a666d12413ac895b2d9192e63a2f2fcc7">draw</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;};</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_drawable_object_html"><div class="ttname"><a href="class_drawable_object.html">DrawableObject</a></div><div class="ttdoc">Interfejs dla klas, które chcą coś renderować</div><div class="ttdef"><b>Definition:</b> DrawableObject.hpp:16</div></div>
+<div class="ttc" id="aclass_simple_drawable_object_html"><div class="ttname"><a href="class_simple_drawable_object.html">SimpleDrawableObject</a></div><div class="ttdoc">Klasa mająca wykonywać prostą operację rysowania na ekran.</div><div class="ttdef"><b>Definition:</b> SimpleDrawableObject.hpp:17</div></div>
+<div class="ttc" id="a_drawable_object_8hpp_html"><div class="ttname"><a href="_drawable_object_8hpp.html">DrawableObject.hpp</a></div></div>
+<div class="ttc" id="aclass_simple_drawable_object_html_a666d12413ac895b2d9192e63a2f2fcc7"><div class="ttname"><a href="class_simple_drawable_object.html#a666d12413ac895b2d9192e63a2f2fcc7">SimpleDrawableObject::draw</a></div><div class="ttdeci">void draw() override</div><div class="ttdoc">Metoda wywoływana na etapie rysowania klatki przez silnik.</div><div class="ttdef"><b>Definition:</b> SimpleDrawableObject.cpp:8</div></div>
+<div class="ttc" id="aclass_simple_drawable_object_html_aa4293aa47c0ad8e50f537dec6d974735"><div class="ttname"><a href="class_simple_drawable_object.html#aa4293aa47c0ad8e50f537dec6d974735">SimpleDrawableObject::SimpleDrawableObject</a></div><div class="ttdeci">SimpleDrawableObject(std::function&lt; void() &gt; draw_func)</div><div class="ttdoc">Konstruktor.</div><div class="ttdef"><b>Definition:</b> SimpleDrawableObject.cpp:3</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano przez &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

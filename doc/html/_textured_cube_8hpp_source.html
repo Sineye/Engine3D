@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Engine3D: Plik źródłowy Sources/PrimitiveRendering/TexturedCube.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Engine3D
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Projekt szkieletu silnika 3D z pomocą API OpenGL</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Szukaj');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_937900b87e0c7a5fa01190c395fb83f7.html">Sources</a></li><li class="navelem"><a class="el" href="dir_33e0883d469fc612bc2d3af7c99a9007.html">PrimitiveRendering</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">TexturedCube.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_textured_cube_8hpp.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_cube_8hpp.html">Cube.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;../Texture/Texture.hpp&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_textured_cube.html">   17</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_textured_cube.html">TexturedCube</a> : <span class="keyword">public</span> <a class="code" href="class_cube.html">Cube</a></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;{</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="class_textured_cube.html#a7fe19ce411299e6eea9391f519eb14a4">   23</a></span>&#160;    <a class="code" href="class_texture.html">Texture</a> *<a class="code" href="class_textured_cube.html#a7fe19ce411299e6eea9391f519eb14a4">texture</a>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <a class="code" href="class_textured_cube.html#aa13ceabd50c19bb077c9ae8d88aa0236">TexturedCube</a>( <span class="keywordtype">float</span> size_side, <span class="keyword">const</span> <span class="keywordtype">char</span> *img_path );</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="class_textured_cube.html#a8762f271027ec16c4096a43eb4a9cecc">~TexturedCube</a>();</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">float</span> *<a class="code" href="class_textured_cube.html#af62b72747f1671f0c50e74fab16831c1">get_tex_coords</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keyword">const</span> GLuint <a class="code" href="class_textured_cube.html#ac0b2d6a0facc55179328038b501a46eb">get_texture_id</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;};</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_textured_cube_html_af62b72747f1671f0c50e74fab16831c1"><div class="ttname"><a href="class_textured_cube.html#af62b72747f1671f0c50e74fab16831c1">TexturedCube::get_tex_coords</a></div><div class="ttdeci">const float * get_tex_coords() const override</div><div class="ttdoc">Zwraca wskaźnik na koordynaty teksturowe dla wierzchołków sześcianu.</div><div class="ttdef"><b>Definition:</b> TexturedCube.cpp:28</div></div>
+<div class="ttc" id="a_cube_8hpp_html"><div class="ttname"><a href="_cube_8hpp.html">Cube.hpp</a></div></div>
+<div class="ttc" id="aclass_textured_cube_html_a7fe19ce411299e6eea9391f519eb14a4"><div class="ttname"><a href="class_textured_cube.html#a7fe19ce411299e6eea9391f519eb14a4">TexturedCube::texture</a></div><div class="ttdeci">Texture * texture</div><div class="ttdoc">Tekstura sześcianu.</div><div class="ttdef"><b>Definition:</b> TexturedCube.hpp:23</div></div>
+<div class="ttc" id="aclass_texture_html"><div class="ttname"><a href="class_texture.html">Texture</a></div><div class="ttdoc">Klasa reprezentująca teksturę</div><div class="ttdef"><b>Definition:</b> Texture.hpp:16</div></div>
+<div class="ttc" id="aclass_textured_cube_html_a8762f271027ec16c4096a43eb4a9cecc"><div class="ttname"><a href="class_textured_cube.html#a8762f271027ec16c4096a43eb4a9cecc">TexturedCube::~TexturedCube</a></div><div class="ttdeci">~TexturedCube()</div><div class="ttdoc">Destruktor.</div><div class="ttdef"><b>Definition:</b> TexturedCube.cpp:20</div></div>
+<div class="ttc" id="aclass_textured_cube_html_ac0b2d6a0facc55179328038b501a46eb"><div class="ttname"><a href="class_textured_cube.html#ac0b2d6a0facc55179328038b501a46eb">TexturedCube::get_texture_id</a></div><div class="ttdeci">const GLuint get_texture_id() const override</div><div class="ttdoc">Zwraca ID tekstury przypisanej do sześcianu.</div><div class="ttdef"><b>Definition:</b> TexturedCube.cpp:33</div></div>
+<div class="ttc" id="aclass_textured_cube_html"><div class="ttname"><a href="class_textured_cube.html">TexturedCube</a></div><div class="ttdoc">Klasa przechowująca dane oteksturowanego sześcianu.</div><div class="ttdef"><b>Definition:</b> TexturedCube.hpp:17</div></div>
+<div class="ttc" id="aclass_textured_cube_html_aa13ceabd50c19bb077c9ae8d88aa0236"><div class="ttname"><a href="class_textured_cube.html#aa13ceabd50c19bb077c9ae8d88aa0236">TexturedCube::TexturedCube</a></div><div class="ttdeci">TexturedCube(float size_side, const char *img_path)</div><div class="ttdoc">Konstruktor.</div><div class="ttdef"><b>Definition:</b> TexturedCube.cpp:15</div></div>
+<div class="ttc" id="aclass_cube_html"><div class="ttname"><a href="class_cube.html">Cube</a></div><div class="ttdoc">Klasa przechowująca dane geometryczne sześcianu.</div><div class="ttdef"><b>Definition:</b> Cube.hpp:18</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano przez &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

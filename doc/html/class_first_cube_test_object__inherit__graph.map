@@ -1,0 +1,7 @@
+<map id="FirstCubeTestObject" name="FirstCubeTestObject">
+<area shape="rect" id="node1" title="Klasa do testowania renderowania prostych sześcianów." alt="" coords="146,155,289,181"/>
+<area shape="rect" id="node2" href="$class_drawable_object.html" title="Interfejs dla klas, które chcą coś renderować" alt="" coords="5,80,120,107"/>
+<area shape="rect" id="node3" href="$class_game_object.html" title="Podstawowa klasa obiektu gry." alt="" coords="170,5,265,32"/>
+<area shape="rect" id="node4" href="$class_event_listening_object.html" title="Interfejs dla klas, które chcą obsługiwać zdarzenia z SDL2." alt="" coords="145,80,290,107"/>
+<area shape="rect" id="node5" href="$class_updatable_object.html" title="Interfejs klas, których stan należy aktualizować z każdą iteracją pętli głównej gry." alt="" coords="314,80,433,107"/>
+</map>

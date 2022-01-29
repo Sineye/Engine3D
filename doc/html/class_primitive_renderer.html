@@ -1,0 +1,702 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Engine3D: Dokumentacja klasy PrimitiveRenderer</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Engine3D
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Projekt szkieletu silnika 3D z pomocą API OpenGL</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Szukaj');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-static-methods">Statyczne metody publiczne</a> &#124;
+<a href="class_primitive_renderer-members.html">Lista wszystkich składowych</a>  </div>
+  <div class="headertitle">
+<div class="title">Dokumentacja klasy PrimitiveRenderer</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Klasa służąca do rysowania prymitywów.  
+ <a href="class_primitive_renderer.html#details">Więcej...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_primitive_renderer_8hpp_source.html">PrimitiveRenderer.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Statyczne metody publiczne</h2></td></tr>
+<tr class="memitem:aa67d91c15a8a66fb2f105242cdf8b8f5"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_primitive_renderer.html#aa67d91c15a8a66fb2f105242cdf8b8f5">draw_points</a> (const std::vector&lt; glm::vec3 &gt; &amp;points, glm::vec3 color, float point_size=1)</td></tr>
+<tr class="memdesc:aa67d91c15a8a66fb2f105242cdf8b8f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rysuje punkty na ekranie.  <a href="class_primitive_renderer.html#aa67d91c15a8a66fb2f105242cdf8b8f5">Więcej...</a><br /></td></tr>
+<tr class="separator:aa67d91c15a8a66fb2f105242cdf8b8f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29d63bc38ec5d8085595587600fe7930"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_primitive_renderer.html#a29d63bc38ec5d8085595587600fe7930">draw_points</a> (const std::vector&lt; <a class="el" href="struct_colored_vertex.html">ColoredVertex</a> &gt; &amp;vertices, float point_size=1)</td></tr>
+<tr class="memdesc:a29d63bc38ec5d8085595587600fe7930"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rysuje punkty na ekranie.  <a href="class_primitive_renderer.html#a29d63bc38ec5d8085595587600fe7930">Więcej...</a><br /></td></tr>
+<tr class="separator:a29d63bc38ec5d8085595587600fe7930"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc916d67d4f55d863050c3048baed20c"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_primitive_renderer.html#adc916d67d4f55d863050c3048baed20c">draw_lines</a> (const std::vector&lt; glm::vec3 &gt; &amp;lines, glm::vec3 color, float line_width=1)</td></tr>
+<tr class="memdesc:adc916d67d4f55d863050c3048baed20c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rysuje linie na ekranie.  <a href="class_primitive_renderer.html#adc916d67d4f55d863050c3048baed20c">Więcej...</a><br /></td></tr>
+<tr class="separator:adc916d67d4f55d863050c3048baed20c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50e93733e5a14bbe974f6f788a359646"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_primitive_renderer.html#a50e93733e5a14bbe974f6f788a359646">draw_lines</a> (const std::vector&lt; <a class="el" href="struct_colored_vertex.html">ColoredVertex</a> &gt; &amp;lines, float line_width=1)</td></tr>
+<tr class="memdesc:a50e93733e5a14bbe974f6f788a359646"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rysuje linie na ekranie.  <a href="class_primitive_renderer.html#a50e93733e5a14bbe974f6f788a359646">Więcej...</a><br /></td></tr>
+<tr class="separator:a50e93733e5a14bbe974f6f788a359646"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2158250bb5ec2448779df42c330986f6"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_primitive_renderer.html#a2158250bb5ec2448779df42c330986f6">draw_multiline</a> (const std::vector&lt; glm::vec3 &gt; &amp;points, glm::vec3 color, float line_width=1)</td></tr>
+<tr class="memdesc:a2158250bb5ec2448779df42c330986f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rysuje przerywaną linię  <a href="class_primitive_renderer.html#a2158250bb5ec2448779df42c330986f6">Więcej...</a><br /></td></tr>
+<tr class="separator:a2158250bb5ec2448779df42c330986f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e9e5359e76fdd97f38f3d77b8c2b455"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_primitive_renderer.html#a2e9e5359e76fdd97f38f3d77b8c2b455">draw_multiline</a> (const std::vector&lt; <a class="el" href="struct_colored_vertex.html">ColoredVertex</a> &gt; &amp;points, float line_width=1)</td></tr>
+<tr class="memdesc:a2e9e5359e76fdd97f38f3d77b8c2b455"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rysuje przerywaną linię  <a href="class_primitive_renderer.html#a2e9e5359e76fdd97f38f3d77b8c2b455">Więcej...</a><br /></td></tr>
+<tr class="separator:a2e9e5359e76fdd97f38f3d77b8c2b455"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa162e19f9cd0958311dbb6f8a6d3a43c"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_primitive_renderer.html#aa162e19f9cd0958311dbb6f8a6d3a43c">draw_triangle</a> (glm::vec3 p1, glm::vec3 p2, glm::vec3 p3, glm::vec3 color)</td></tr>
+<tr class="memdesc:aa162e19f9cd0958311dbb6f8a6d3a43c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rysuje trójkąt.  <a href="class_primitive_renderer.html#aa162e19f9cd0958311dbb6f8a6d3a43c">Więcej...</a><br /></td></tr>
+<tr class="separator:aa162e19f9cd0958311dbb6f8a6d3a43c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae922fdfe976e1d71d7b942a35daa2b18"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_primitive_renderer.html#ae922fdfe976e1d71d7b942a35daa2b18">draw_triangle</a> (<a class="el" href="struct_colored_vertex.html">ColoredVertex</a> p1, <a class="el" href="struct_colored_vertex.html">ColoredVertex</a> p2, <a class="el" href="struct_colored_vertex.html">ColoredVertex</a> p3)</td></tr>
+<tr class="memdesc:ae922fdfe976e1d71d7b942a35daa2b18"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rysuje trójkąt.  <a href="class_primitive_renderer.html#ae922fdfe976e1d71d7b942a35daa2b18">Więcej...</a><br /></td></tr>
+<tr class="separator:ae922fdfe976e1d71d7b942a35daa2b18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade8d8b4a2858a2ae6cdcba427b2b3125"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_primitive_renderer.html#ade8d8b4a2858a2ae6cdcba427b2b3125">draw_triangle_fan</a> (const std::vector&lt; glm::vec3 &gt; &amp;fan_vertices, glm::vec3 color)</td></tr>
+<tr class="memdesc:ade8d8b4a2858a2ae6cdcba427b2b3125"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rysuje wachlarz trójkątów.  <a href="class_primitive_renderer.html#ade8d8b4a2858a2ae6cdcba427b2b3125">Więcej...</a><br /></td></tr>
+<tr class="separator:ade8d8b4a2858a2ae6cdcba427b2b3125"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad27371f5e95772ab7640d49cc8672975"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_primitive_renderer.html#ad27371f5e95772ab7640d49cc8672975">draw_quad</a> (glm::vec3 p1, glm::vec3 p2, glm::vec3 p3, glm::vec3 p4, glm::vec3 color)</td></tr>
+<tr class="memdesc:ad27371f5e95772ab7640d49cc8672975"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rysuje czworokąt.  <a href="class_primitive_renderer.html#ad27371f5e95772ab7640d49cc8672975">Więcej...</a><br /></td></tr>
+<tr class="separator:ad27371f5e95772ab7640d49cc8672975"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a215e2e2497fb58a6af6f53dd9e5655a0"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_primitive_renderer.html#a215e2e2497fb58a6af6f53dd9e5655a0">draw_quad</a> (<a class="el" href="struct_colored_vertex.html">ColoredVertex</a> p1, <a class="el" href="struct_colored_vertex.html">ColoredVertex</a> p2, <a class="el" href="struct_colored_vertex.html">ColoredVertex</a> p3, <a class="el" href="struct_colored_vertex.html">ColoredVertex</a> p4)</td></tr>
+<tr class="memdesc:a215e2e2497fb58a6af6f53dd9e5655a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rysuje czworokąt.  <a href="class_primitive_renderer.html#a215e2e2497fb58a6af6f53dd9e5655a0">Więcej...</a><br /></td></tr>
+<tr class="separator:a215e2e2497fb58a6af6f53dd9e5655a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Opis szczegółowy</h2>
+<div class="textblock"><p>Klasa służąca do rysowania prymitywów. </p>
+</div><h2 class="groupheader">Dokumentacja funkcji składowych</h2>
+<a id="a50e93733e5a14bbe974f6f788a359646"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50e93733e5a14bbe974f6f788a359646">&#9670;&nbsp;</a></span>draw_lines() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PrimitiveRenderer::draw_lines </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="struct_colored_vertex.html">ColoredVertex</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>lines</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>line_width</em> = <code>1</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Rysuje linie na ekranie. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">lines</td><td>wektor struktur z pozycjami i kolorami wierzchołków, z których składają się linie </td></tr>
+    <tr><td class="paramname">line_width</td><td>grubość linii </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="adc916d67d4f55d863050c3048baed20c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc916d67d4f55d863050c3048baed20c">&#9670;&nbsp;</a></span>draw_lines() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PrimitiveRenderer::draw_lines </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; glm::vec3 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>lines</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">glm::vec3&#160;</td>
+          <td class="paramname"><em>color</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>line_width</em> = <code>1</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Rysuje linie na ekranie. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">lines</td><td>wektor pozycji wierzchołków, z których składają się linie </td></tr>
+    <tr><td class="paramname">color</td><td>kolor linii </td></tr>
+    <tr><td class="paramname">line_width</td><td>grubość linii </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a2e9e5359e76fdd97f38f3d77b8c2b455"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e9e5359e76fdd97f38f3d77b8c2b455">&#9670;&nbsp;</a></span>draw_multiline() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PrimitiveRenderer::draw_multiline </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="struct_colored_vertex.html">ColoredVertex</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>points</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>line_width</em> = <code>1</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Rysuje przerywaną linię </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">points</td><td>punkty struktur z pozycjami i kolorami wierzchołków, z których składa się linia </td></tr>
+    <tr><td class="paramname">line_width</td><td>grubość linii </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a2158250bb5ec2448779df42c330986f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2158250bb5ec2448779df42c330986f6">&#9670;&nbsp;</a></span>draw_multiline() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PrimitiveRenderer::draw_multiline </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; glm::vec3 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>points</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">glm::vec3&#160;</td>
+          <td class="paramname"><em>color</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>line_width</em> = <code>1</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Rysuje przerywaną linię </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">points</td><td>punkty, z których składa się linia </td></tr>
+    <tr><td class="paramname">color</td><td>kolor linii </td></tr>
+    <tr><td class="paramname">line_width</td><td>grubość linii </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a29d63bc38ec5d8085595587600fe7930"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29d63bc38ec5d8085595587600fe7930">&#9670;&nbsp;</a></span>draw_points() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PrimitiveRenderer::draw_points </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="struct_colored_vertex.html">ColoredVertex</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>vertices</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>point_size</em> = <code>1</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Rysuje punkty na ekranie. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vertices</td><td>wektor struktur z pozycjami i kolorami punktów </td></tr>
+    <tr><td class="paramname">point_size</td><td>wielkośc punktów </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa67d91c15a8a66fb2f105242cdf8b8f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa67d91c15a8a66fb2f105242cdf8b8f5">&#9670;&nbsp;</a></span>draw_points() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PrimitiveRenderer::draw_points </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; glm::vec3 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>points</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">glm::vec3&#160;</td>
+          <td class="paramname"><em>color</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>point_size</em> = <code>1</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Rysuje punkty na ekranie. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">points</td><td>wektor pozycji punktów </td></tr>
+    <tr><td class="paramname">color</td><td>kolor punktów </td></tr>
+    <tr><td class="paramname">point_size</td><td>wielkość punktu </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a215e2e2497fb58a6af6f53dd9e5655a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a215e2e2497fb58a6af6f53dd9e5655a0">&#9670;&nbsp;</a></span>draw_quad() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PrimitiveRenderer::draw_quad </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_colored_vertex.html">ColoredVertex</a>&#160;</td>
+          <td class="paramname"><em>p1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_colored_vertex.html">ColoredVertex</a>&#160;</td>
+          <td class="paramname"><em>p2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_colored_vertex.html">ColoredVertex</a>&#160;</td>
+          <td class="paramname"><em>p3</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_colored_vertex.html">ColoredVertex</a>&#160;</td>
+          <td class="paramname"><em>p4</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Rysuje czworokąt. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p1</td><td>1. kolorowy wierzchołek czworokąta </td></tr>
+    <tr><td class="paramname">p2</td><td>2. kolorowy wierzchołek czworokąta </td></tr>
+    <tr><td class="paramname">p3</td><td>3. kolorowy wierzchołek czworokąta </td></tr>
+    <tr><td class="paramname">p4</td><td>4. kolorowy wierzchołek czworokąta </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ad27371f5e95772ab7640d49cc8672975"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad27371f5e95772ab7640d49cc8672975">&#9670;&nbsp;</a></span>draw_quad() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PrimitiveRenderer::draw_quad </td>
+          <td>(</td>
+          <td class="paramtype">glm::vec3&#160;</td>
+          <td class="paramname"><em>p1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">glm::vec3&#160;</td>
+          <td class="paramname"><em>p2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">glm::vec3&#160;</td>
+          <td class="paramname"><em>p3</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">glm::vec3&#160;</td>
+          <td class="paramname"><em>p4</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">glm::vec3&#160;</td>
+          <td class="paramname"><em>color</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Rysuje czworokąt. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p1</td><td>1. wierzchołek czworokąta </td></tr>
+    <tr><td class="paramname">p2</td><td>2. wierzchołek czworokąta </td></tr>
+    <tr><td class="paramname">p3</td><td>3. wierzchołek czworokąta </td></tr>
+    <tr><td class="paramname">p4</td><td>4. wierzchołek czworokąta </td></tr>
+    <tr><td class="paramname">color</td><td>kolor czworokąta </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae922fdfe976e1d71d7b942a35daa2b18"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae922fdfe976e1d71d7b942a35daa2b18">&#9670;&nbsp;</a></span>draw_triangle() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PrimitiveRenderer::draw_triangle </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_colored_vertex.html">ColoredVertex</a>&#160;</td>
+          <td class="paramname"><em>p1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_colored_vertex.html">ColoredVertex</a>&#160;</td>
+          <td class="paramname"><em>p2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_colored_vertex.html">ColoredVertex</a>&#160;</td>
+          <td class="paramname"><em>p3</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Rysuje trójkąt. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p1</td><td>1. kolorowy wierzchołek trójkąta </td></tr>
+    <tr><td class="paramname">p2</td><td>2. kolorowy wierzchołek trójkąta </td></tr>
+    <tr><td class="paramname">p3</td><td>3. kolorowy wierzchołek trójkąta </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa162e19f9cd0958311dbb6f8a6d3a43c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa162e19f9cd0958311dbb6f8a6d3a43c">&#9670;&nbsp;</a></span>draw_triangle() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PrimitiveRenderer::draw_triangle </td>
+          <td>(</td>
+          <td class="paramtype">glm::vec3&#160;</td>
+          <td class="paramname"><em>p1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">glm::vec3&#160;</td>
+          <td class="paramname"><em>p2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">glm::vec3&#160;</td>
+          <td class="paramname"><em>p3</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">glm::vec3&#160;</td>
+          <td class="paramname"><em>color</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Rysuje trójkąt. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p1</td><td>1. wierzchołek trójkąta </td></tr>
+    <tr><td class="paramname">p2</td><td>2. wierzchołek trójkąta </td></tr>
+    <tr><td class="paramname">p3</td><td>3. wierzchołek trójkąta </td></tr>
+    <tr><td class="paramname">color</td><td>kolor trójkąta </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ade8d8b4a2858a2ae6cdcba427b2b3125"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade8d8b4a2858a2ae6cdcba427b2b3125">&#9670;&nbsp;</a></span>draw_triangle_fan()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PrimitiveRenderer::draw_triangle_fan </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; glm::vec3 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>fan_vertices</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">glm::vec3&#160;</td>
+          <td class="paramname"><em>color</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Rysuje wachlarz trójkątów. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fan_vertices</td><td>wierzchołki trójkątów </td></tr>
+    <tr><td class="paramname">color</td><td>kolor trójkątów </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>Dokumentacja dla tej klasy została wygenerowana z plików:<ul>
+<li>Sources/PrimitiveRendering/<a class="el" href="_primitive_renderer_8hpp_source.html">PrimitiveRenderer.hpp</a></li>
+<li>Sources/PrimitiveRendering/PrimitiveRenderer.cpp</li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano przez &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

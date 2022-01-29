@@ -1,0 +1,4 @@
+<map id="Cube" name="Cube">
+<area shape="rect" id="node1" title="Klasa przechowująca dane geometryczne sześcianu." alt="" coords="8,80,61,107"/>
+<area shape="rect" id="node2" href="$class_i_mesh.html" title="Interfejs dla brył geometrycznych." alt="" coords="5,5,64,32"/>
+</map>

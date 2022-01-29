@@ -1,0 +1,5 @@
+<map id="SimpleEventListeningObject" name="SimpleEventListeningObject">
+<area shape="rect" id="node1" title="Obiekt mający wywoływać prostą procedurę obsługi zdarzenia." alt="" coords="5,155,191,181"/>
+<area shape="rect" id="node2" href="$class_event_listening_object.html" title="Interfejs dla klas, które chcą obsługiwać zdarzenia z SDL2." alt="" coords="25,80,171,107"/>
+<area shape="rect" id="node3" href="$class_game_object.html" title="Podstawowa klasa obiektu gry." alt="" coords="51,5,145,32"/>
+</map>

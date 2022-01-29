@@ -1,0 +1,6 @@
+<map id="LightingTest" name="LightingTest">
+<area shape="rect" id="node1" title="Klasa do testowania oświetlenia." alt="" coords="96,155,188,181"/>
+<area shape="rect" id="node2" href="$class_updatable_object.html" title="Interfejs klas, których stan należy aktualizować z każdą iteracją pętli głównej gry." alt="" coords="5,80,124,107"/>
+<area shape="rect" id="node3" href="$class_game_object.html" title="Podstawowa klasa obiektu gry." alt="" coords="95,5,189,32"/>
+<area shape="rect" id="node4" href="$class_event_listening_object.html" title="Interfejs dla klas, które chcą obsługiwać zdarzenia z SDL2." alt="" coords="148,80,293,107"/>
+</map>

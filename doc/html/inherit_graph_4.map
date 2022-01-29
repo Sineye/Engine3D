@@ -1,0 +1,7 @@
+<map id="Graficzna hierarchia klas" name="Graficzna hierarchia klas">
+<area shape="rect" id="node1" href="$class_i_mesh.html" title="Interfejs dla brył geometrycznych." alt="" coords="5,56,64,83"/>
+<area shape="rect" id="node2" href="$class_cube.html" title="Klasa przechowująca dane geometryczne sześcianu." alt="" coords="117,31,170,57"/>
+<area shape="rect" id="node5" href="$class_sphere.html" title="Klasa przechowująca dane o sferze." alt="" coords="112,81,175,108"/>
+<area shape="rect" id="node3" href="$class_colored_cube.html" title="Klasa przechowująca dane kolorowego sześcianu." alt="" coords="225,5,323,32"/>
+<area shape="rect" id="node4" href="$class_textured_cube.html" title="Klasa przechowująca dane oteksturowanego sześcianu." alt="" coords="223,56,325,83"/>
+</map>
